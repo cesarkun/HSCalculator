@@ -1,0 +1,465 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <TextView
+        android:text="-"
+        android:id="@+id/tv_mill_hp_minus"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        card:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:text="-"
+        android:id="@+id/tv_mill_cards_minus"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal16"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal33"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_cards_plus"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        android:gravity="center"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        card:layout_constraintTop_toTopOf="parent"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
+        card:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="8dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_hp_plus"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        android:gravity="center"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal33"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        card:srcCompat="@drawable/ic_coldlight"
+        android:id="@+id/iv_mill_coldlight"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginTop="8dp"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="coldlight"
+        card:layout_constraintHorizontal_bias="0.43"
+        android:scaleType="fitCenter"
+        card:layout_constraintBottom_toTopOf="@+id/tv_mill_coldlight" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        card:srcCompat="@drawable/ic_brann"
+        android:id="@+id/iv_mill_brann"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal66"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="brann"
+        android:scaleType="fitCenter"
+        card:layout_constraintBottom_toTopOf="@+id/tv_mill_brann"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        card:srcCompat="@drawable/ic_shadowstep"
+        android:id="@+id/iv_mill_shadowstep"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical66"
+        android:contentDescription="shadowstep"
+        card:layout_constraintHorizontal_bias="0.12"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="8dp"
+        card:layout_constraintBottom_toTopOf="@+id/tv_mill_shadowstep"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:id="@+id/tv_mill_cards_name"
+        android:textSize="12sp"
+        android:gravity="bottom|center_horizontal"
+        android:text="Cards Left"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        card:layout_constraintTop_toTopOf="parent"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical20"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintHorizontal_bias="0.08"
+        card:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Mana Cost"
+        android:ems="10"
+        android:id="@+id/tv_mill_manacost_name"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginTop="8dp"
+        card:layout_constraintTop_toTopOf="parent"
+        android:gravity="bottom|center_horizontal"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        card:layout_constraintHorizontal_bias="0.0"
+        card:layout_constraintVertical_bias="0.56"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Result"
+        android:ems="10"
+        android:id="@+id/tv_mill_total_name"
+        android:layout_marginTop="8dp"
+        card:layout_constraintTop_toTopOf="parent"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintRight_toRightOf="parent"
+        android:gravity="bottom|center_horizontal"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_mill_cards_value"
+        android:gravity="top|center_horizontal"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal33"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical20"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_armor_plus"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        android:gravity="center"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal33"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical53"
+        card:layout_constraintVertical_bias="1.0"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:text="-"
+        android:id="@+id/tv_mill_armor_minus"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical53"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
+        card:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_mill_manacost_value"
+        android:gravity="top|center_horizontal"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal33"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_mill_total_value"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal16"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal33"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center_horizontal"
+        card:layout_constraintHorizontal_bias="0.56" />
+
+    <TextView
+        android:text="x2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_coldlight"
+        card:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
+        android:gravity="center"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:text="x2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_brann"
+        card:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="x2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mill_shadowstep"
+        card:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical66"
+        android:gravity="center"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="HP"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_mill_hp_name"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal33"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical20"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom|center_horizontal" />
+
+    <TextView
+        android:text="Armor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_mill_armor_name"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical53"
+        android:layout_marginEnd="8dp"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal33"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        card:layout_constraintHorizontal_bias="0.43"
+        card:layout_constraintVertical_bias="0.56"
+        android:gravity="bottom|center_horizontal" />
+
+    <EditText
+        android:text="30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:id="@+id/tv_mill_hp_value"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical20"
+        android:layout_marginStart="8dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center_horizontal" />
+
+    <EditText
+        android:text="0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:id="@+id/tv_mill_armor_value"
+        card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal66"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
+        card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical53"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top|center_horizontal" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical20"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="74dp"
+        card:layout_constraintGuide_percent="0.20608108" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical25"
+        android:orientation="vertical"
+        card:layout_constraintGuide_percent="0.25675675"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="92dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical33"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="122dp"
+        card:layout_constraintGuide_percent="0.33854166" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical53"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="215dp"
+        card:layout_constraintGuide_percent="0.5972222" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical66"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="240dp"
+        card:layout_constraintGuide_percent="0.6666667" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical75"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="271dp"
+        card:layout_constraintGuide_percent="0.7526042" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:id="@+id/gl_mill_vertical87"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="271dp"
+        card:layout_constraintGuide_percent="0.87" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:id="@+id/gl_mill_horizontal16"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="93dp"
+        tools:layout_editor_absoluteX="0dp"
+        card:layout_constraintGuide_percent="0.1641791" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gl_mill_horizontal33"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="190dp"
+        tools:layout_editor_absoluteX="0dp"
+        card:layout_constraintGuide_percent="0.33509701" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gl_mill_horizontal50"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="289dp"
+        tools:layout_editor_absoluteX="0dp"
+        card:layout_constraintGuide_percent="0.5097002" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gl_mill_horizontal66"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="378dp"
+        tools:layout_editor_absoluteX="0dp"
+        card:layout_constraintGuide_percent="0.6666667" />
+
+
+</android.support.constraint.ConstraintLayout>
