@@ -1,6 +1,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,15 +26,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:id="@+id/tv_mill_cards_name"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         card:layout_constraintLeft_toLeftOf="parent"
         card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical20"
         android:layout_marginEnd="8dp"
-        android:gravity="bottom|center_horizontal" />
+        android:gravity="bottom|center_horizontal"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:text="0"
@@ -71,14 +71,13 @@
         android:layout_height="0dp"
         android:id="@+id/tv_mill_manacost_name"
         android:gravity="bottom|center_horizontal"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical33"
         card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
         android:layout_marginBottom="8dp"
         card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp" />
+        android:layout_marginStart="8dp"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:text="0"
@@ -102,15 +101,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:id="@+id/tv_mill_draw_name"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         card:layout_constraintRight_toRightOf="parent"
         card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical66"
         android:layout_marginStart="8dp"
-        android:gravity="bottom|center_horizontal" />
+        android:gravity="bottom|center_horizontal"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:text="0"
@@ -369,7 +367,7 @@
         android:id="@+id/gl_mill_vertical20"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteX="156dp"
         card:layout_constraintGuide_percent="0.20277777" />
 
     <android.support.constraint.Guideline
@@ -379,7 +377,7 @@
         android:orientation="vertical"
         card:layout_constraintGuide_percent="0.25675675"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="92dp" />
+        tools:layout_editor_absoluteX="197dp" />
 
     <android.support.constraint.Guideline
         android:layout_width="0dp"
@@ -387,16 +385,16 @@
         android:id="@+id/gl_mill_vertical33"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteX="260dp"
         card:layout_constraintGuide_percent="0.33888888" />
 
     <android.support.constraint.Guideline
         android:layout_width="0dp"
-        android:layout_height="567dp"
+        android:layout_height="951dp"
         android:id="@+id/gl_mill_vertical53"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteX="407dp"
         card:layout_constraintGuide_percent="0.53055555" />
 
     <android.support.constraint.Guideline
@@ -405,7 +403,7 @@
         android:id="@+id/gl_mill_vertical66"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteX="512dp"
         card:layout_constraintGuide_percent="0.6666667" />
 
     <android.support.constraint.Guideline
@@ -414,15 +412,15 @@
         android:id="@+id/gl_mill_vertical75"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteX="578dp"
         card:layout_constraintGuide_percent="0.7526042" />
 
     <android.support.constraint.Guideline
-        android:layout_width="360dp"
+        android:layout_width="768dp"
         android:layout_height="0dp"
         android:id="@+id/gl_mill_horizontal10"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="57dp"
+        tools:layout_editor_absoluteY="96dp"
         tools:layout_editor_absoluteX="0dp"
         card:layout_constraintGuide_percent="0.1005291" />
 
@@ -431,17 +429,17 @@
         android:layout_height="0dp"
         android:id="@+id/gl_mill_horizontal16"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="93dp"
+        tools:layout_editor_absoluteY="156dp"
         tools:layout_editor_absoluteX="0dp"
         card:layout_constraintGuide_percent="0.1641791" />
 
     <android.support.constraint.Guideline
-        android:layout_width="360dp"
+        android:layout_width="768dp"
         android:layout_height="0dp"
         android:id="@+id/gl_mill_horizontal22"
         android:orientation="horizontal"
         card:layout_constraintGuide_percent="0.2292769"
-        tools:layout_editor_absoluteY="130dp"
+        tools:layout_editor_absoluteY="218dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
@@ -449,34 +447,34 @@
         android:layout_height="wrap_content"
         android:id="@+id/gl_mill_horizontal33"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="190dp"
+        tools:layout_editor_absoluteY="319dp"
         tools:layout_editor_absoluteX="0dp"
         card:layout_constraintGuide_percent="0.33509701" />
 
     <android.support.constraint.Guideline
-        android:layout_width="360dp"
+        android:layout_width="768dp"
         android:layout_height="wrap_content"
         android:id="@+id/gl_mill_horizontal44"
         android:orientation="horizontal"
         card:layout_constraintGuide_percent="0.4479718"
-        tools:layout_editor_absoluteY="254dp"
+        tools:layout_editor_absoluteY="426dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
-        android:layout_width="360dp"
+        android:layout_width="768dp"
         android:layout_height="wrap_content"
         android:id="@+id/gl_mill_horizontal50"
         android:orientation="horizontal"
         card:layout_constraintGuide_percent="0.50793654"
-        tools:layout_editor_absoluteY="288dp"
+        tools:layout_editor_absoluteY="483dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
-        android:layout_width="360dp"
+        android:layout_width="768dp"
         android:layout_height="0dp"
         android:id="@+id/gl_mill_horizontal56"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="321dp"
+        tools:layout_editor_absoluteY="538dp"
         tools:layout_editor_absoluteX="0dp"
         card:layout_constraintGuide_percent="0.56613755" />
 
@@ -485,8 +483,24 @@
         android:layout_height="wrap_content"
         android:id="@+id/gl_mill_horizontal66"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="378dp"
+        tools:layout_editor_absoluteY="634dp"
         tools:layout_editor_absoluteX="0dp"
         card:layout_constraintGuide_percent="0.6666667" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner"
+        android:layout_marginEnd="16dp"
+        card:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintTop_toTopOf="parent"
+        card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintVertical_bias="0.0">
+    </com.google.android.gms.ads.AdView>
 
 </android.support.constraint.ConstraintLayout>

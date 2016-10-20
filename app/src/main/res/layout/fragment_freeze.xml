@@ -1,6 +1,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -220,15 +221,14 @@
         android:id="@+id/tv_freeze_emperor_name"
         android:textSize="@dimen/text_size"
         android:gravity="bottom|center_horizontal"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         card:layout_constraintLeft_toLeftOf="parent"
         card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical20"
         android:layout_marginEnd="8dp"
         card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
         android:layout_marginBottom="8dp"
-        android:text="Emperor\nTicks" />
+        android:text="Emperor\nTicks"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:layout_width="0dp"
@@ -238,14 +238,14 @@
         android:ems="10"
         android:id="@+id/tv_freeze_manacost_name"
         card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical66"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="8dp"
         android:gravity="bottom|center_horizontal"
         card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical33"
         card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:layout_width="0dp"
@@ -254,15 +254,14 @@
         android:textSize="@dimen/text_size"
         android:ems="10"
         android:id="@+id/tv_freeze_total_name"
-        android:layout_marginTop="8dp"
-        card:layout_constraintTop_toTopOf="parent"
         card:layout_constraintLeft_toRightOf="@+id/tv_freeze_manacost_name"
         card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         card:layout_constraintRight_toRightOf="parent"
         android:gravity="bottom|center_horizontal"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        card:layout_constraintTop_toBottomOf="@+id/ad_banner" />
 
     <TextView
         android:text="0"
@@ -446,6 +445,21 @@
         card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical66"
         android:gravity="center"
         android:layout_marginStart="8dp" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner"
+        android:layout_marginEnd="16dp"
+        card:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintTop_toTopOf="parent"
+        card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
+        android:layout_marginBottom="8dp"
+        card:layout_constraintVertical_bias="0.0">
+    </com.google.android.gms.ads.AdView>
 
 
 </android.support.constraint.ConstraintLayout>

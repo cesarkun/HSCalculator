@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import br.com.cattledog.hscalculator.R;
 
 /**
@@ -54,6 +57,7 @@ public class MillFragment extends Fragment {
     private int coldlight;
     private int brann;
     private int shadowstep;
+    private AdView mAdView;
 
 
     public MillFragment() {
@@ -69,7 +73,16 @@ public class MillFragment extends Fragment {
         setOnClicks();
 
         updateValues();
+        addAdStuff(rootview);
         return rootview;
+    }
+
+    private void addAdStuff(View rootview){
+        mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
     }
 
     private void initializeCounters() {
@@ -255,6 +268,8 @@ public class MillFragment extends Fragment {
                         s.replace(0, s.length(), "30");
                         hp = 30;
                     }
+                    if(s.toString().startsWith("0") && s.length()!=1)
+                        s.replace(0, s.length(), hp+"");
                 }
                 catch (Exception e){
                     s.append("0");
@@ -270,13 +285,14 @@ public class MillFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 try {
                     armor = Integer.parseInt(s.toString());
+                    if(s.toString().startsWith("0") && s.length()!=1)
+                        s.replace(0, s.length(), armor+"");
                 }
                 catch (Exception e){
                     s.append("0");

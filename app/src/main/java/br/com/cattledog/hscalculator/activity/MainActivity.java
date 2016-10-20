@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.HashMap;
@@ -64,16 +63,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             fragmentTransaction(FREEZE_FRAGMENT);
         }
-        addAdStuff();
 
-    }
-
-    private void addAdStuff(){
-        mAdView = (AdView) findViewById(R.id.ad_banner);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-        mAdView.loadAd(adRequest);
     }
 
     @Override

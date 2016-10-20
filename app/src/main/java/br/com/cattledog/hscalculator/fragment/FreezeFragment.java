@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import br.com.cattledog.hscalculator.R;
 
 /**
@@ -51,7 +54,7 @@ public class FreezeFragment extends Fragment {
     private int fireball;
     private int thalnos;
     private int kobold;
-
+    private AdView mAdView;
 
 
     public FreezeFragment() {
@@ -67,7 +70,16 @@ public class FreezeFragment extends Fragment {
         setOnClicks();
 
         updateValues();
+        addAdStuff(rootview);
         return rootview;
+    }
+
+    private void addAdStuff(View rootview){
+        mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
     }
 
     private void initializeCounters() {
