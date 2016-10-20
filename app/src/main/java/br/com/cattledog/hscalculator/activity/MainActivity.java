@@ -13,6 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.HashMap;
 
 import br.com.cattledog.hscalculator.R;
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity
     private static final String CURRENT_FRAGMENT = "current_fragment_index_flag";
     private Toolbar toolbar;
 
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +64,40 @@ public class MainActivity extends AppCompatActivity
         } else {
             fragmentTransaction(FREEZE_FRAGMENT);
         }
+        addAdStuff();
 
+    }
+
+    private void addAdStuff(){
+        mAdView = (AdView) findViewById(R.id.ad_banner);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
+    }
+
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 
     @Override

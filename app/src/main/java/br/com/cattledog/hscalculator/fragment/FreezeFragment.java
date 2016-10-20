@@ -37,8 +37,8 @@ public class FreezeFragment extends Fragment {
     private TextView tv_freeze_thalnos;
     private TextView tv_freeze_kobold;
 
-    private TextView tv_freeze_emperor_plus;
-    private TextView tv_freeze_emperor_minus;
+    private ImageView iv_freeze_emperor_plus;
+    private ImageView iv_freeze_emperor_minus;
 
     private int emperorTicks;
     private int manaCost;
@@ -120,8 +120,8 @@ public class FreezeFragment extends Fragment {
         tv_freeze_thalnos = (TextView) rootview.findViewById(R.id.tv_freeze_thalnos);
         tv_freeze_kobold = (TextView) rootview.findViewById(R.id.tv_freeze_kobold);
 
-        tv_freeze_emperor_plus = (TextView) rootview.findViewById(R.id.tv_freeze_emperor_plus);
-        tv_freeze_emperor_minus = (TextView) rootview.findViewById(R.id.tv_freeze_emperor_minus);
+        iv_freeze_emperor_plus = (ImageView) rootview.findViewById(R.id.iv_freeze_emperor_plus);
+        iv_freeze_emperor_minus = (ImageView) rootview.findViewById(R.id.iv_freeze_emperor_minus);
     }
 
     private void setOnClicks() {
@@ -282,14 +282,14 @@ public class FreezeFragment extends Fragment {
             }
         });
 
-        tv_freeze_emperor_plus.setOnClickListener(new View.OnClickListener() {
+        iv_freeze_emperor_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 emperorTicks++;
                 updateValues();
             }
         });
-        tv_freeze_emperor_minus.setOnClickListener(new View.OnClickListener() {
+        iv_freeze_emperor_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(emperorTicks>0)

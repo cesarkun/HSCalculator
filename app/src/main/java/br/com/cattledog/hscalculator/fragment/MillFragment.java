@@ -23,9 +23,10 @@ import br.com.cattledog.hscalculator.R;
 public class MillFragment extends Fragment {
     private TextView tv_mill_cards_value;
     private TextView tv_mill_manacost_value;
+    private TextView tv_mill_draw_value;
+    private EditText et_mill_hp_value;
+    private EditText et_mill_armor_value;
     private TextView tv_mill_total_value;
-    private EditText tv_mill_hp_value;
-    private EditText tv_mill_armor_value;
     private ImageView iv_mill_coldlight;
     private ImageView iv_mill_brann;
     private ImageView iv_mill_shadowstep;
@@ -34,14 +35,14 @@ public class MillFragment extends Fragment {
     private TextView tv_mill_brann;
     private TextView tv_mill_shadowstep;
 
-    private TextView tv_mill_cards_plus;
-    private TextView tv_mill_cards_minus;
+    private ImageView iv_mill_cards_plus;
+    private ImageView iv_mill_cards_minus;
 
-    private TextView tv_mill_hp_plus;
-    private TextView tv_mill_hp_minus;
+    private ImageView iv_mill_hp_plus;
+    private ImageView iv_mill_hp_minus;
 
-    private TextView tv_mill_armor_plus;
-    private TextView tv_mill_armor_minus;
+    private ImageView iv_mill_armor_plus;
+    private ImageView iv_mill_armor_minus;
 
     private int cards;
     private int manaCost;
@@ -93,9 +94,10 @@ public class MillFragment extends Fragment {
     private void loadViews(View rootview) {
         tv_mill_cards_value = (TextView) rootview.findViewById(R.id.tv_mill_cards_value);
         tv_mill_manacost_value = (TextView) rootview.findViewById(R.id.tv_mill_manacost_value);
+        tv_mill_draw_value = (TextView) rootview.findViewById(R.id.tv_mill_draw_value);
+        et_mill_hp_value = (EditText) rootview.findViewById(R.id.et_mill_hp_value);
+        et_mill_armor_value = (EditText) rootview.findViewById(R.id.et_mill_armor_value);
         tv_mill_total_value = (TextView) rootview.findViewById(R.id.tv_mill_total_value);
-        tv_mill_hp_value = (EditText) rootview.findViewById(R.id.tv_mill_hp_value);
-        tv_mill_armor_value = (EditText) rootview.findViewById(R.id.tv_mill_armor_value);
 
 
         iv_mill_coldlight = (ImageView) rootview.findViewById(R.id.iv_mill_coldlight);
@@ -106,14 +108,14 @@ public class MillFragment extends Fragment {
         tv_mill_brann = (TextView) rootview.findViewById(R.id.tv_mill_brann);
         tv_mill_shadowstep = (TextView) rootview.findViewById(R.id.tv_mill_shadowstep);
 
-        tv_mill_cards_plus = (TextView) rootview.findViewById(R.id.tv_mill_cards_plus);
-        tv_mill_cards_minus = (TextView) rootview.findViewById(R.id.tv_mill_cards_minus);
+        iv_mill_cards_plus = (ImageView) rootview.findViewById(R.id.iv_mill_cards_plus);
+        iv_mill_cards_minus = (ImageView) rootview.findViewById(R.id.iv_mill_cards_minus);
 
-        tv_mill_hp_plus = (TextView) rootview.findViewById(R.id.tv_mill_hp_plus);
-        tv_mill_hp_minus = (TextView) rootview.findViewById(R.id.tv_mill_hp_minus);
+        iv_mill_hp_plus = (ImageView) rootview.findViewById(R.id.iv_mill_hp_plus);
+        iv_mill_hp_minus = (ImageView) rootview.findViewById(R.id.iv_mill_hp_minus);
 
-        tv_mill_armor_plus = (TextView) rootview.findViewById(R.id.tv_mill_armor_plus);
-        tv_mill_armor_minus = (TextView) rootview.findViewById(R.id.tv_mill_armor_minus);
+        iv_mill_armor_plus = (ImageView) rootview.findViewById(R.id.iv_mill_armor_plus);
+        iv_mill_armor_minus = (ImageView) rootview.findViewById(R.id.iv_mill_armor_minus);
     }
 
     private void setOnClicks() {
@@ -188,14 +190,14 @@ public class MillFragment extends Fragment {
         });
 
 
-        tv_mill_cards_plus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_cards_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cards++;
                 updateValues();
             }
         });
-        tv_mill_cards_minus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_cards_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cards--;
@@ -203,14 +205,14 @@ public class MillFragment extends Fragment {
             }
         });
 
-        tv_mill_hp_plus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_hp_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 hp++;
                 updateValues();
             }
         });
-        tv_mill_hp_minus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_hp_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(hp>0)
@@ -219,14 +221,14 @@ public class MillFragment extends Fragment {
             }
         });
 
-        tv_mill_armor_plus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_armor_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 armor++;
                 updateValues();
             }
         });
-        tv_mill_armor_minus.setOnClickListener(new View.OnClickListener() {
+        iv_mill_armor_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(armor>0)
@@ -234,7 +236,7 @@ public class MillFragment extends Fragment {
                 updateValues();
             }
         });
-        tv_mill_hp_value.addTextChangedListener(new TextWatcher() {
+        et_mill_hp_value.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -260,7 +262,7 @@ public class MillFragment extends Fragment {
                 }
             }
         });
-        tv_mill_armor_value.addTextChangedListener(new TextWatcher() {
+        et_mill_armor_value.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -293,14 +295,11 @@ public class MillFragment extends Fragment {
     private int calculateDamage() {
         int acumulatedDamage = cards -1;
         int r = hp+armor;
-        System.out.println("//-------------");
         for (int i = 0; i < cardDraw+1; i++) {
             if(acumulatedDamage<0)
                 r+=acumulatedDamage;
-            System.out.println("hp: "+r+"  damage: "+acumulatedDamage);
             acumulatedDamage--;
         }
-        System.out.println("-------------");
         return r;
     }
 
@@ -310,11 +309,12 @@ public class MillFragment extends Fragment {
         addCardDraw(coldlight+shadowstep, 2);
         calculateDamage();
         manaCost = coldlight*3+brann*3+shadowstep;
+        tv_mill_draw_value.setText((cardDraw+1)+"");
         tv_mill_cards_value.setText(cards+"");
         tv_mill_manacost_value.setText(manaCost+"");
         tv_mill_total_value.setText(calculateDamage()+"");
-        tv_mill_hp_value.setText(hp+"");
-        tv_mill_armor_value.setText(armor+"");
+        et_mill_hp_value.setText(hp+"");
+        et_mill_armor_value.setText(armor+"");
     }
 
 }
