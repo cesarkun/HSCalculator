@@ -1,4 +1,4 @@
-package br.com.cattledog.hscalculator.activity;
+package br.com.cattledog.hscalculators.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -17,9 +17,9 @@ import com.google.android.gms.ads.AdView;
 
 import java.util.HashMap;
 
-import br.com.cattledog.hscalculator.R;
-import br.com.cattledog.hscalculator.fragment.FreezeFragment;
-import br.com.cattledog.hscalculator.fragment.MillFragment;
+import br.com.cattledog.hscalculators.R;
+import br.com.cattledog.hscalculators.fragment.FreezeFragment;
+import br.com.cattledog.hscalculators.fragment.MillFragment;
 
 /**
  * Created by Cesar A. dos Santos on 19/10/2016.

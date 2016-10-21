@@ -1,4 +1,4 @@
-package br.com.cattledog.hscalculator.fragment;
+package br.com.cattledog.hscalculators.fragment;
 
 
 import android.annotation.TargetApi;
@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import br.com.cattledog.hscalculator.R;
+import br.com.cattledog.hscalculators.R;
 
 /**
  * Created by Cesar A. dos Santos on 19/10/2016.
