@@ -80,7 +80,6 @@ public class MillFragment extends Fragment {
     private void addAdStuff(View rootview){
         mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         mAdView.loadAd(adRequest);
     }

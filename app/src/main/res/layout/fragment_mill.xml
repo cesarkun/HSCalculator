@@ -24,8 +24,6 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
             card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal16"
             card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal10"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp" />
 
         <TextView
@@ -68,9 +66,7 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
             card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
             card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal22"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:text="Mana Cost"
@@ -244,23 +240,18 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
             card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
             card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp" />
 
         <ImageView
             card:srcCompat="@drawable/ic_minus_button"
             android:id="@+id/iv_mill_hp_minus"
-            card:layout_constraintHorizontal_bias="1.0"
             android:layout_height="0dp"
             android:layout_width="0dp"
             card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
             card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal56"
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical20"
             card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical33"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp" />
+            android:layout_marginTop="8dp" />
 
         <ImageView
             android:layout_width="0dp"
@@ -271,17 +262,13 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical53"
             card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal50"
             card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginBottom="8dp" />
 
         <ImageView
             card:srcCompat="@drawable/ic_minus_button"
             android:id="@+id/iv_mill_armor_minus"
             card:layout_constraintRight_toLeftOf="@+id/gl_mill_vertical66"
-            android:layout_marginEnd="8dp"
             card:layout_constraintLeft_toLeftOf="@+id/gl_mill_vertical53"
-            android:layout_marginStart="8dp"
             card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal50"
             android:layout_marginTop="8dp"
             android:layout_width="0dp"
@@ -375,7 +362,7 @@
             android:id="@+id/gl_mill_vertical20"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteX="65dp"
             card:layout_constraintGuide_percent="0.20277777" />
 
         <android.support.constraint.Guideline
@@ -385,7 +372,7 @@
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.25675675"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="197dp" />
+            tools:layout_editor_absoluteX="82dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
@@ -393,7 +380,7 @@
             android:id="@+id/gl_mill_vertical33"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteX="108dp"
             card:layout_constraintGuide_percent="0.33888888" />
 
         <android.support.constraint.Guideline
@@ -402,7 +389,7 @@
             android:id="@+id/gl_mill_vertical53"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="407dp"
+            tools:layout_editor_absoluteX="170dp"
             card:layout_constraintGuide_percent="0.53055555" />
 
         <android.support.constraint.Guideline
@@ -411,7 +398,7 @@
             android:id="@+id/gl_mill_vertical66"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="512dp"
+            tools:layout_editor_absoluteX="213dp"
             card:layout_constraintGuide_percent="0.6666667" />
 
         <android.support.constraint.Guideline
@@ -420,7 +407,7 @@
             android:id="@+id/gl_mill_vertical75"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="578dp"
+            tools:layout_editor_absoluteX="241dp"
             card:layout_constraintGuide_percent="0.7526042" />
 
         <android.support.constraint.Guideline
@@ -428,26 +415,26 @@
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal10"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="90dp"
+            tools:layout_editor_absoluteY="45dp"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.1005291" />
+            card:layout_constraintGuide_percent="0.10" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal16"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="147dp"
+            tools:layout_editor_absoluteY="74dp"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.1641791" />
+            card:layout_constraintGuide_percent="0.16" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal22"
             android:orientation="horizontal"
-            card:layout_constraintGuide_percent="0.2292769"
-            tools:layout_editor_absoluteY="205dp"
+            card:layout_constraintGuide_percent="0.22"
+            tools:layout_editor_absoluteY="103dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -455,7 +442,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal33"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="299dp"
+            tools:layout_editor_absoluteY="151dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.33509701" />
 
@@ -464,8 +451,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal44"
             android:orientation="horizontal"
-            card:layout_constraintGuide_percent="0.4479718"
-            tools:layout_editor_absoluteY="400dp"
+            card:layout_constraintGuide_percent="0.44"
+            tools:layout_editor_absoluteY="202dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -473,8 +460,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal50"
             android:orientation="horizontal"
-            card:layout_constraintGuide_percent="0.50793654"
-            tools:layout_editor_absoluteY="454dp"
+            card:layout_constraintGuide_percent="0.50"
+            tools:layout_editor_absoluteY="229dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -482,16 +469,16 @@
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal56"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="506dp"
+            tools:layout_editor_absoluteY="255dp"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.56613755" />
+            card:layout_constraintGuide_percent="0.56" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal66"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="595dp"
+            tools:layout_editor_absoluteY="301dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.6666667" />
     </android.support.constraint.ConstraintLayout>

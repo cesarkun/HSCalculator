@@ -17,11 +17,11 @@
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical20"
+            android:id="@+id/gl_freeze_vertical23"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="74dp"
-            card:layout_constraintGuide_percent="0.20608108" />
+            card:layout_constraintGuide_percent="0.23" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
@@ -30,16 +30,16 @@
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.25675675"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="92dp" />
+            tools:layout_editor_absoluteX="82dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical33"
+            android:id="@+id/gl_freeze_vertical36"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="122dp"
-            card:layout_constraintGuide_percent="0.33854166" />
+            tools:layout_editor_absoluteX="115dp"
+            card:layout_constraintGuide_percent="0.36" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -47,17 +47,17 @@
             android:id="@+id/gl_freeze_vertical50"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteX="160dp"
             card:layout_constraintGuide_percent="0.5" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical66"
+            android:id="@+id/gl_freeze_vertical69"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="240dp"
-            card:layout_constraintGuide_percent="0.6666667" />
+            tools:layout_editor_absoluteX="221dp"
+            card:layout_constraintGuide_percent="0.69" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
             android:id="@+id/gl_freeze_vertical75"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="271dp"
+            tools:layout_editor_absoluteX="241dp"
             card:layout_constraintGuide_percent="0.7526042" />
 
         <android.support.constraint.Guideline
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_freeze_horizontal10"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="54dp"
+            tools:layout_editor_absoluteY="48dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.10405644" />
 
@@ -82,7 +82,7 @@
             android:layout_height="0dp"
             android:id="@+id/gl_freeze_horizontal16"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="85dp"
+            tools:layout_editor_absoluteY="75dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.1641791" />
 
@@ -92,7 +92,7 @@
             android:id="@+id/gl_freeze_horizontal22"
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.2239859"
-            tools:layout_editor_absoluteY="116dp"
+            tools:layout_editor_absoluteY="103dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_freeze_horizontal33"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="173dp"
+            tools:layout_editor_absoluteY="154dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.33509701" />
 
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_freeze_horizontal66"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="345dp"
+            tools:layout_editor_absoluteY="306dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.6666667" />
 
@@ -182,7 +182,7 @@
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
             android:layout_marginTop="8dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
             android:layout_marginEnd="8dp"
             android:contentDescription="fireball"
             card:layout_constraintHorizontal_bias="0.43"
@@ -195,8 +195,8 @@
             card:srcCompat="@drawable/ic_thalnos"
             android:id="@+id/iv_freeze_thalnos"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical33"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -213,13 +213,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
             android:contentDescription="kobold"
             card:layout_constraintHorizontal_bias="0.12"
             android:scaleType="fitCenter"
-            android:layout_marginStart="8dp"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_kobold"
-            android:layout_marginBottom="8dp" />
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_kobold" />
 
         <TextView
             android:layout_width="0dp"
@@ -230,7 +228,7 @@
             android:gravity="bottom|center_horizontal"
             android:layout_marginStart="8dp"
             card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical20"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
             android:layout_marginEnd="8dp"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             android:layout_marginBottom="8dp"
@@ -245,10 +243,10 @@
             android:textSize="@dimen/text_size"
             android:ems="10"
             android:id="@+id/tv_freeze_manacost_name"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
             android:layout_marginEnd="8dp"
             android:gravity="bottom|center_horizontal"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="8dp"
@@ -262,15 +260,15 @@
             android:textSize="@dimen/text_size"
             android:ems="10"
             android:id="@+id/tv_freeze_total_name"
-            card:layout_constraintLeft_toRightOf="@+id/tv_freeze_manacost_name"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             card:layout_constraintRight_toRightOf="parent"
             android:gravity="bottom|center_horizontal"
             android:layout_marginBottom="8dp"
             card:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:text="0"
@@ -282,7 +280,7 @@
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
             android:layout_marginBottom="8dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical20"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
             android:layout_marginEnd="8dp"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
             android:gravity="top|center_horizontal"
@@ -295,11 +293,11 @@
             android:id="@+id/iv_freeze_emperor_plus"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             android:layout_marginBottom="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical20"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
             android:layout_marginStart="8dp"
             android:minHeight="25dp"
             android:minWidth="25dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
             android:layout_marginEnd="8dp"
             card:layout_constraintVertical_bias="1.0"
             android:gravity="center"
@@ -312,7 +310,7 @@
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:textSize="@dimen/text_size"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical20"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal22"
             android:layout_marginStart="8dp"
@@ -320,7 +318,7 @@
             android:gravity="center"
             android:minHeight="25dp"
             android:minWidth="25dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
             android:layout_marginEnd="8dp"
             android:scaleType="fitCenter"
             card:layout_constraintHorizontal_bias="0.56" />
@@ -331,9 +329,9 @@
             android:layout_height="0dp"
             android:id="@+id/tv_freeze_manacost_value"
             android:textSize="@dimen/text_size"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
             android:layout_marginEnd="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
             android:layout_marginBottom="8dp"
             android:gravity="top|center_horizontal"
@@ -352,7 +350,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="top|center_horizontal" />
@@ -423,7 +421,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginStart="8dp"
             card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
             android:gravity="center"
             android:layout_marginEnd="8dp" />
 
@@ -435,8 +433,8 @@
             android:textSize="@dimen/text_size"
             card:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical33"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:layout_marginStart="8dp" />
@@ -451,7 +449,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
             android:gravity="center"
             android:layout_marginStart="8dp" />
     </android.support.constraint.ConstraintLayout>
