@@ -72,7 +72,7 @@ public class MillFragment extends Fragment {
         initializeCounters();
         setOnClicks();
 
-        updateValues();
+        updateValues(true);
         addAdStuff(rootview);
         return rootview;
     }
@@ -157,7 +157,7 @@ public class MillFragment extends Fragment {
                         tv_mill_coldlight.setText("");
                         break;
                 }
-                updateValues();
+                updateValues(true);
             }
         });
         iv_mill_brann.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +175,7 @@ public class MillFragment extends Fragment {
                         tv_mill_brann.setText("");
                         break;
                 }
-                updateValues();
+                updateValues(true);
             }
         });
         iv_mill_shadowstep.setOnClickListener(new View.OnClickListener() {
@@ -198,7 +198,7 @@ public class MillFragment extends Fragment {
                         tv_mill_shadowstep.setText("");
                         break;
                 }
-                updateValues();
+                updateValues(true);
             }
         });
 
@@ -207,14 +207,14 @@ public class MillFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 cards++;
-                updateValues();
+                updateValues(true);
             }
         });
         iv_mill_cards_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cards--;
-                updateValues();
+                updateValues(true);
             }
         });
 
@@ -222,7 +222,7 @@ public class MillFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 hp++;
-                updateValues();
+                updateValues(true);
             }
         });
         iv_mill_hp_minus.setOnClickListener(new View.OnClickListener() {
@@ -230,7 +230,7 @@ public class MillFragment extends Fragment {
             public void onClick(View v) {
                 if(hp>0)
                     hp--;
-                updateValues();
+                updateValues(true);
             }
         });
 
@@ -238,7 +238,7 @@ public class MillFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 armor++;
-                updateValues();
+                updateValues(true);
             }
         });
         iv_mill_armor_minus.setOnClickListener(new View.OnClickListener() {
@@ -246,7 +246,7 @@ public class MillFragment extends Fragment {
             public void onClick(View v) {
                 if(armor>0)
                     armor--;
-                updateValues();
+                updateValues(true);
             }
         });
         et_mill_hp_value.addTextChangedListener(new TextWatcher() {
@@ -275,6 +275,7 @@ public class MillFragment extends Fragment {
                     s.append("0");
                     hp = 0;
                 }
+                updateValues(false);
             }
         });
         et_mill_armor_value.addTextChangedListener(new TextWatcher() {
@@ -290,7 +291,11 @@ public class MillFragment extends Fragment {
             @Override
             public void afterTextChanged(Editable s) {
                 try {
-                    armor = Integer.parseInt(s.toString());
+                    armor = (int)Long.parseLong(s.toString());
+                    if(armor > 9999){
+                        s.replace(0, s.length(), "9999");
+                        armor = 9999;
+                    }
                     if(s.toString().startsWith("0") && s.length()!=1)
                         s.replace(0, s.length(), armor+"");
                 }
@@ -298,6 +303,7 @@ public class MillFragment extends Fragment {
                     s.append("0");
                     armor = 0;
                 }
+                updateValues(false);
             }
         });
     }
@@ -319,7 +325,7 @@ public class MillFragment extends Fragment {
         return r;
     }
 
-    private void updateValues(){
+    private void updateValues(boolean update){
         cardDraw = 0;
         damage = 0;
         addCardDraw(coldlight+shadowstep, 2);
@@ -329,8 +335,10 @@ public class MillFragment extends Fragment {
         tv_mill_cards_value.setText(cards+"");
         tv_mill_manacost_value.setText(manaCost+"");
         tv_mill_total_value.setText(calculateDamage()+"");
-        et_mill_hp_value.setText(hp+"");
-        et_mill_armor_value.setText(armor+"");
+        if(update) {
+            et_mill_hp_value.setText(hp + "");
+            et_mill_armor_value.setText(armor + "");
+        }
     }
 
 }
