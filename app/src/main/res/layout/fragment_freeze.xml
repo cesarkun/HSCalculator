@@ -4,8 +4,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_white">
+    android:layout_height="match_parent">
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cl_freeze"
         android:layout_width="0dp"
@@ -14,6 +13,29 @@
         card:layout_constraintRight_toRightOf="parent"
         card:layout_constraintTop_toTopOf="parent"
         card:layout_constraintBottom_toTopOf="@+id/ad_banner">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:srcCompat="@drawable/separator"
+            android:alpha="0.8"
+            android:id="@+id/iv_freeze_separator1"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:layout_constraintBottom_toBottomOf="@+id/gl_freeze_horizontal33"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:srcCompat="@drawable/separator"
+            android:alpha="0.7"
+            android:id="@+id/iv_freeze_separator2"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintBottom_toBottomOf="@+id/gl_freeze_horizontal66"/>
+
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -125,6 +147,8 @@
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_frostbolt"
             android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:contentDescription="frostbolt"
             android:scaleType="fitCenter" />
 
@@ -141,6 +165,8 @@
             android:layout_marginTop="8dp"
             android:contentDescription="icelance"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_icelance" />
 
         <ImageView
@@ -156,6 +182,8 @@
             android:layout_marginTop="8dp"
             android:contentDescription="ftorch"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_forgottentorch" />
 
         <ImageView
@@ -171,10 +199,12 @@
             android:layout_marginStart="8dp"
             android:contentDescription="rtorch"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_roaringtorch" />
 
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             card:srcCompat="@drawable/ic_fireball"
             android:id="@+id/iv_freeze_fireball"
@@ -187,10 +217,12 @@
             android:contentDescription="fireball"
             card:layout_constraintHorizontal_bias="0.43"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_fireball" />
 
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             card:srcCompat="@drawable/ic_thalnos"
             android:id="@+id/iv_freeze_thalnos"
@@ -202,6 +234,8 @@
             android:layout_marginStart="8dp"
             android:contentDescription="thalnos"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_thalnos" />
 
         <ImageView
@@ -217,6 +251,8 @@
             android:contentDescription="kobold"
             card:layout_constraintHorizontal_bias="0.12"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintBottom_toTopOf="@+id/tv_freeze_kobold" />
 
         <TextView
@@ -288,24 +324,25 @@
 
         <ImageView
             android:src="@drawable/ic_add_button"
+            android:alpha="0.7"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/iv_freeze_emperor_plus"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginBottom="8dp"
             card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
-            android:layout_marginStart="8dp"
             android:minHeight="25dp"
             android:minWidth="25dp"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            android:layout_marginEnd="8dp"
             card:layout_constraintVertical_bias="1.0"
             android:gravity="center"
             android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal10" />
 
         <ImageView
             android:src="@drawable/ic_minus_button"
+            android:alpha="0.7"
             android:id="@+id/iv_freeze_emperor_minus"
             android:layout_height="0dp"
             android:layout_width="0dp"
@@ -313,13 +350,12 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal22"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:minHeight="25dp"
             android:minWidth="25dp"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:scaleType="fitCenter"
             card:layout_constraintHorizontal_bias="0.56" />
 

@@ -296,7 +296,8 @@ public class FreezeFragment extends Fragment {
         iv_freeze_emperor_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                emperorTicks++;
+                if(emperorTicks < 9999)
+                    emperorTicks++;
                 updateValues();
             }
         });
@@ -326,6 +327,8 @@ public class FreezeFragment extends Fragment {
         addDamage(rtorch, 6);
         addDamage(fireball, 6);
         manaCost = frostbolt*2+icelance+ftorch*3+rtorch*3+fireball*4+thalnos*2+kobold*4-emperorTicks;
+        if(manaCost < 0)
+            manaCost = 0;
         tv_freeze_emperor_value.setText(emperorTicks+"");
         tv_freeze_manacost_value.setText(manaCost+"");
         tv_freeze_total_value.setText(total+"");
