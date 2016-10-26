@@ -10,5 +10,20 @@
             android:id="@+id/nav_mill"
             android:icon="@drawable/ic_menu_mill"
             android:title="@string/menu_item_title2" />
+        <item
+            android:id="@+id/nav_anyfin"
+            android:icon="@drawable/ic_menu_anyfin"
+            android:title="@string/menu_item_title3" />
+        <!--
+        <item
+            android:id="@+id/nav_totem"
+            android:icon="@drawable/ic_menu_totem"
+            android:title="@string/menu_item_title4" />
+        <item
+            android:id="@+id/nav_roar"
+            android:icon="@drawable/ic_menu_roar"
+            android:title="@string/menu_item_title5" />
+            -->
+
     </group>
 </menu>

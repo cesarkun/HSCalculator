@@ -23,7 +23,7 @@
             card:layout_constraintRight_toRightOf="parent"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal33"
-            card:layout_constraintBottom_toBottomOf="@+id/gl_mill_horizontal33"/>
+            card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal33" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
             card:layout_constraintRight_toRightOf="parent"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintTop_toTopOf="@+id/gl_mill_horizontal66"
-            card:layout_constraintBottom_toBottomOf="@+id/gl_mill_horizontal66"/>
+            card:layout_constraintBottom_toTopOf="@+id/gl_mill_horizontal66" />
 
         <ImageView
             android:layout_width="0dp"
@@ -51,7 +51,7 @@
             />
 
         <TextView
-            android:text="Cards Left "
+            android:text="@string/tv_mill_cards_name"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -66,7 +66,7 @@
             card:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -95,7 +95,7 @@
             android:clickable="true"/>
 
         <TextView
-            android:text="Mana Cost"
+            android:text="@string/tv_mana_cost"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -110,7 +110,7 @@
             card:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -126,7 +126,7 @@
             android:gravity="top|center_horizontal" />
 
         <TextView
-            android:text="Cards Drawn"
+            android:text="@string/tv_mill_draw_name"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -141,7 +141,7 @@
             card:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -157,7 +157,7 @@
             android:gravity="top|center" />
 
         <TextView
-            android:text="HP Left"
+            android:text="@string/tv_hp_left"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -173,7 +173,7 @@
             android:gravity="bottom|center_horizontal" />
 
         <TextView
-            android:text="Armor"
+            android:text="@string/tv_armor"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -189,7 +189,7 @@
             android:gravity="bottom|center_horizontal" />
 
         <TextView
-            android:text="HP"
+            android:text="@string/tv_hp"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -205,7 +205,7 @@
             android:gravity="bottom|center_horizontal" />
 
         <EditText
-            android:text="0"
+            android:text="@string/pattern_number"
             android:inputType="number"
             android:digits="0123456789"
             android:textSize="@dimen/text_size"
@@ -223,7 +223,7 @@
             android:gravity="top|center_horizontal" />
 
         <EditText
-            android:text="0"
+            android:text="@string/pattern_number"
             android:inputType="number"
             android:digits="0123456789"
             android:textSize="@dimen/text_size"
@@ -242,7 +242,7 @@
             card:layout_constraintVertical_bias="0.37" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -326,7 +326,7 @@
             card:layout_constraintBottom_toTopOf="@+id/tv_mill_coldlight" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -340,7 +340,7 @@
             android:gravity="center" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -354,7 +354,7 @@
             android:gravity="center" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:textSize="@dimen/text_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -403,7 +403,7 @@
             android:id="@+id/gl_mill_vertical20"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteX="156dp"
             card:layout_constraintGuide_percent="0.20277777" />
 
         <android.support.constraint.Guideline
@@ -413,7 +413,7 @@
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.25675675"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="82dp" />
+            tools:layout_editor_absoluteX="197dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
@@ -421,7 +421,7 @@
             android:id="@+id/gl_mill_vertical33"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteX="260dp"
             card:layout_constraintGuide_percent="0.33888888" />
 
         <android.support.constraint.Guideline
@@ -430,7 +430,7 @@
             android:id="@+id/gl_mill_vertical53"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteX="407dp"
             card:layout_constraintGuide_percent="0.53055555" />
 
         <android.support.constraint.Guideline
@@ -439,7 +439,7 @@
             android:id="@+id/gl_mill_vertical66"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="213dp"
+            tools:layout_editor_absoluteX="512dp"
             card:layout_constraintGuide_percent="0.6666667" />
 
         <android.support.constraint.Guideline
@@ -448,7 +448,7 @@
             android:id="@+id/gl_mill_vertical75"
             android:orientation="vertical"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="241dp"
+            tools:layout_editor_absoluteX="578dp"
             card:layout_constraintGuide_percent="0.7526042" />
 
         <android.support.constraint.Guideline
@@ -456,16 +456,16 @@
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal10"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="45dp"
+            tools:layout_editor_absoluteY="89dp"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.10" />
+            card:layout_constraintGuide_percent="0.1" />
 
         <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal16"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="74dp"
+            tools:layout_editor_absoluteY="143dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.16" />
 
@@ -475,7 +475,7 @@
             android:id="@+id/gl_mill_horizontal22"
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.22"
-            tools:layout_editor_absoluteY="103dp"
+            tools:layout_editor_absoluteY="196dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -483,7 +483,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal33"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="151dp"
+            tools:layout_editor_absoluteY="299dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.33509701" />
 
@@ -493,7 +493,7 @@
             android:id="@+id/gl_mill_horizontal44"
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.44"
-            tools:layout_editor_absoluteY="202dp"
+            tools:layout_editor_absoluteY="393dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -501,8 +501,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal50"
             android:orientation="horizontal"
-            card:layout_constraintGuide_percent="0.50"
-            tools:layout_editor_absoluteY="229dp"
+            card:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteY="447dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -510,7 +510,7 @@
             android:layout_height="0dp"
             android:id="@+id/gl_mill_horizontal56"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="255dp"
+            tools:layout_editor_absoluteY="500dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.56" />
 
@@ -519,7 +519,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/gl_mill_horizontal66"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="301dp"
+            tools:layout_editor_absoluteY="595dp"
             tools:layout_editor_absoluteX="0dp"
             card:layout_constraintGuide_percent="0.6666667" />
     </android.support.constraint.ConstraintLayout>

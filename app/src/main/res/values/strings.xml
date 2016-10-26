@@ -1,11 +1,29 @@
 <resources>
+    <string name="ad_banner" translatable="false">ca-app-pub-4604539796245749/3303664516</string>
     <string name="app_name">Calculator: HearthStone</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="pattern_number_percent" translatable="false">%d\%</string>
+    <string name="pattern_number" translatable="false">%d</string>
+    <string name="pattern_x_number" translatable="false">x%d</string>
+    <string name="tv_hp_left">HP Left</string>
+    <string name="tv_armor">Armor</string>
+    <string name="tv_hp">HP</string>
+    <string name="tv_mana_cost">Mana Cost</string>
+
+
     <string name="menu_item_title1">Freeze Calculator</string>
     <string name="menu_item_title2">Mill Calculator</string>
-    <string name="ad_banner">ca-app-pub-4604539796245749/3303664516</string>
+    <string name="menu_item_title3">Anyfin Calculator</string>
+    <string name="menu_item_title4">Totem Calculator</string>
+    <string name="menu_item_title5">Roar Calculator</string>
+
+
+    <string name="tv_anyfin_result_name">Success Rate</string>
+    <string name="tv_anyfin_hp_left_name">HP Left / Chance</string>
+    <string name="tv_freeze_emperor_name">Emperor\nTicks</string>
+    <string name="tv_freeze_total_name">Total</string>
+    <string name="tv_mill_cards_name">Cards Left</string>
+    <string name="tv_mill_draw_name">Cards Drawn</string>
 </resources>

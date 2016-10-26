@@ -1,0 +1,382 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_anyfin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        card:layout_constraintBottom_toTopOf="@+id/ad_banner"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_anyfin_separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            ads:srcCompat="@drawable/separator"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50" />
+
+        <TextView
+            android:id="@+id/tv_anyfin_result_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Success Rate"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal65"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50" />
+
+        <TextView
+            android:id="@+id/tv_anyfin_result_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top|center"
+            android:text="100%"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal65"/>
+
+        <TextView
+            android:id="@+id/tv_anyfin_total_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="HP Left"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/tv_anyfin_armor_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="Armor"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/et_anyfin_armor_value"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical53"
+            card:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_anyfin_hp_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom|center_horizontal"
+            android:text="HP"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical20"
+            card:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_anyfin_hp_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:digits="0123456789"
+            android:gravity="top|center_horizontal"
+            android:inputType="number"
+            android:text="0"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical20"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25" />
+
+        <EditText
+            android:id="@+id/et_anyfin_armor_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:digits="0123456789"
+            android:gravity="top|center_horizontal"
+            android:inputType="number"
+            android:text="0"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical53"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintVertical_bias="0.37" />
+
+        <ImageView
+            android:id="@+id/iv_anyfin_hp_plus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical20"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal19"
+            card:srcCompat="@drawable/ic_add_button" />
+
+        <ImageView
+            android:id="@+id/iv_anyfin_hp_minus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal31"
+            card:layout_constraintHorizontal_bias="1.0"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical20"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintVertical_bias="0.0"
+            card:srcCompat="@drawable/ic_minus_button" />
+
+        <ImageView
+            android:id="@+id/iv_anyfin_armor_plus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical53"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal19"
+            card:srcCompat="@drawable/ic_add_button"/>
+
+        <ImageView
+            android:id="@+id/iv_anyfin_armor_minus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal31"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical53"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:srcCompat="@drawable/ic_minus_button" />
+
+        <ImageView
+            android:id="@+id/iv_anyfin_bluegill"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/tv_anyfin_bluegill"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:srcCompat="@drawable/ic_bluegill" />
+
+        <TextView
+            android:id="@+id/tv_anyfin_bluegill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="x2"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical33" />
+
+        <TextView
+            android:id="@+id/tv_anyfin_warleader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="x2"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical66" />
+
+        <ImageView
+            android:id="@+id/iv_anyfin_warleader"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            card:layout_constraintBottom_toTopOf="@+id/tv_anyfin_warleader"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:srcCompat="@drawable/ic_warleader" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_vertical20"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.20277777"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_vertical33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.33888888"
+            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_vertical53"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.53055555"
+            tools:layout_editor_absoluteX="407dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_vertical66"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.6666667"
+            tools:layout_editor_absoluteX="512dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_vertical82"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.825"
+            tools:layout_editor_absoluteX="634dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_horizontal19"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.19"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="170dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_horizontal25"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.25"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="223dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_horizontal31"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.31"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="277dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_horizontal50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_anyfin_horizontal65"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.65"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="580dp" />
+        <TextView
+            android:id="@+id/tv_anyfin_total_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top|center_horizontal"
+            android:text="0"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_banner"
+        card:layout_constraintBottom_toBottomOf="parent"
+        card:layout_constraintLeft_toLeftOf="parent"
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintTop_toTopOf="@+id/cl_anyfin"
+        card:layout_constraintVertical_bias="1.0"/>
+
+</android.support.constraint.ConstraintLayout>

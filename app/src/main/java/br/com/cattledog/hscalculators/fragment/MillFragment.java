@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,14 +51,12 @@ public class MillFragment extends Fragment {
     private int cards;
     private int manaCost;
     private int cardDraw;
-    private int damage;
     private int hp;
     private int armor;
 
     private int coldlight;
     private int brann;
     private int shadowstep;
-    private AdView mAdView;
 
 
     public MillFragment() {
@@ -78,7 +77,7 @@ public class MillFragment extends Fragment {
     }
 
     private void addAdStuff(View rootview){
-        mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
+        AdView mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
         mAdView.loadAd(adRequest);
@@ -87,7 +86,6 @@ public class MillFragment extends Fragment {
     private void initializeCounters() {
         manaCost = 0;
         cardDraw = 0;
-        damage = 0;
         hp = 30;
         armor = 0;
 
@@ -138,17 +136,17 @@ public class MillFragment extends Fragment {
                     case 0:
                         coldlight++;
                         iv_mill_coldlight.setAlpha((float)1);
-                        tv_mill_coldlight.setText("x1");
+                        tv_mill_coldlight.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         coldlight++;
                         iv_mill_coldlight.setAlpha((float)1);
-                        tv_mill_coldlight.setText("x2");
+                        tv_mill_coldlight.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     case 2:
                         coldlight++;
                         iv_mill_coldlight.setAlpha((float)1);
-                        tv_mill_coldlight.setText("x3");
+                        tv_mill_coldlight.setText(String.format(getResources().getString(R.string.pattern_x_number), 3));
                         break;
                     default:
                         coldlight = 0;
@@ -166,7 +164,7 @@ public class MillFragment extends Fragment {
                     case 0:
                         brann++;
                         iv_mill_brann.setAlpha((float)1);
-                        tv_mill_brann.setText("x1");
+                        tv_mill_brann.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     default:
                         brann = 0;
@@ -184,12 +182,12 @@ public class MillFragment extends Fragment {
                     case 0:
                         shadowstep++;
                         iv_mill_shadowstep.setAlpha((float)1);
-                        tv_mill_shadowstep.setText("x1");
+                        tv_mill_shadowstep.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         shadowstep++;
                         iv_mill_shadowstep.setAlpha((float)1);
-                        tv_mill_shadowstep.setText("x2");
+                        tv_mill_shadowstep.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         shadowstep = 0;
@@ -205,14 +203,16 @@ public class MillFragment extends Fragment {
         iv_mill_cards_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cards++;
+                if(cards < 9999)
+                    cards++;
                 updateValues(true);
             }
         });
         iv_mill_cards_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cards--;
+                if(cards > -9999)
+                    cards--;
                 updateValues(true);
             }
         });
@@ -326,17 +326,16 @@ public class MillFragment extends Fragment {
 
     private void updateValues(boolean update){
         cardDraw = 0;
-        damage = 0;
-        addCardDraw(coldlight+shadowstep, 2);
+        addCardDraw(((coldlight == 0) ? coldlight:coldlight+shadowstep), 2);
         calculateDamage();
         manaCost = coldlight*3+brann*3+shadowstep;
-        tv_mill_draw_value.setText((cardDraw+1)+"");
-        tv_mill_cards_value.setText(cards+"");
-        tv_mill_manacost_value.setText(manaCost+"");
-        tv_mill_total_value.setText(calculateDamage()+"");
+        tv_mill_draw_value.setText(String.format(getResources().getString(R.string.pattern_number), cardDraw+1));
+        tv_mill_cards_value.setText(String.format(getResources().getString(R.string.pattern_number), cards));
+        tv_mill_manacost_value.setText(String.format(getResources().getString(R.string.pattern_number), manaCost));
+        tv_mill_total_value.setText(String.format(getResources().getString(R.string.pattern_number), calculateDamage()));
         if(update) {
-            et_mill_hp_value.setText(hp + "");
-            et_mill_armor_value.setText(armor + "");
+            et_mill_hp_value.setText(String.format(getResources().getString(R.string.pattern_number), hp));
+            et_mill_armor_value.setText(String.format(getResources().getString(R.string.pattern_number), armor));
         }
     }
 

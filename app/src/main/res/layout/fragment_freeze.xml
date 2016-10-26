@@ -266,14 +266,14 @@
             android:layout_marginEnd="8dp"
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             android:layout_marginBottom="8dp"
-            android:text="Emperor\nTicks"
+            android:text="@string/tv_freeze_emperor_name"
             card:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="8dp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="Mana Cost"
+            android:text="@string/tv_mana_cost"
             android:textSize="@dimen/text_size"
             android:ems="10"
             android:id="@+id/tv_freeze_manacost_name"
@@ -290,7 +290,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="Total"
+            android:text="@string/tv_freeze_total_name"
             android:textSize="@dimen/text_size"
             android:ems="10"
             android:id="@+id/tv_freeze_total_name"
@@ -305,7 +305,7 @@
             android:layout_marginStart="8dp" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:textSize="@dimen/text_size"
@@ -358,7 +358,7 @@
             card:layout_constraintHorizontal_bias="0.56" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/tv_freeze_manacost_value"
@@ -374,7 +374,7 @@
             android:layout_marginTop="8dp" />
 
         <TextView
-            android:text="0"
+            android:text="@string/pattern_number"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/tv_freeze_total_value"
@@ -390,7 +390,7 @@
             android:gravity="top|center_horizontal" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_frostbolt"
@@ -404,7 +404,7 @@
             android:gravity="center" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_icelance"
@@ -418,7 +418,7 @@
             android:layout_marginStart="8dp" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_forgottentorch"
@@ -432,7 +432,7 @@
             android:layout_marginStart="8dp" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_roaringtorch"
@@ -446,7 +446,7 @@
             android:layout_marginStart="8dp" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_fireball"
@@ -460,7 +460,7 @@
             android:layout_marginEnd="8dp" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_thalnos"
@@ -474,7 +474,7 @@
             android:layout_marginStart="8dp" />
 
         <TextView
-            android:text="x2"
+            android:text="@string/pattern_x_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/tv_freeze_kobold"

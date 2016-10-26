@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +40,7 @@ public class FreezeFragment extends Fragment {
     private TextView tv_freeze_fireball;
     private TextView tv_freeze_thalnos;
     private TextView tv_freeze_kobold;
+    private CheckBox bx_freeze_ping;
 
     private ImageView iv_freeze_emperor_plus;
     private ImageView iv_freeze_emperor_minus;
@@ -54,7 +56,6 @@ public class FreezeFragment extends Fragment {
     private int fireball;
     private int thalnos;
     private int kobold;
-    private AdView mAdView;
 
 
     public FreezeFragment() {
@@ -75,7 +76,7 @@ public class FreezeFragment extends Fragment {
     }
 
     private void addAdStuff(View rootview){
-        mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
+        AdView mAdView = (AdView) rootview.findViewById(R.id.ad_banner);
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
         mAdView.loadAd(adRequest);
@@ -143,12 +144,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         frostbolt++;
                         iv_freeze_frostbolt.setAlpha((float)1);
-                        tv_freeze_frostbolt.setText("x1");
+                        tv_freeze_frostbolt.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         frostbolt++;
                         iv_freeze_frostbolt.setAlpha((float)1);
-                        tv_freeze_frostbolt.setText("x2");
+                        tv_freeze_frostbolt.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         frostbolt = 0;
@@ -166,12 +167,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         icelance++;
                         iv_freeze_icelance.setAlpha((float)1);
-                        tv_freeze_icelance.setText("x1");
+                        tv_freeze_icelance.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         icelance++;
                         iv_freeze_icelance.setAlpha((float)1);
-                        tv_freeze_icelance.setText("x2");
+                        tv_freeze_icelance.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         icelance = 0;
@@ -189,12 +190,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         ftorch++;
                         iv_freeze_forgottentorch.setAlpha((float)1);
-                        tv_freeze_forgottentorch.setText("x1");
+                        tv_freeze_forgottentorch.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         ftorch++;
                         iv_freeze_forgottentorch.setAlpha((float)1);
-                        tv_freeze_forgottentorch.setText("x2");
+                        tv_freeze_forgottentorch.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         ftorch = 0;
@@ -212,12 +213,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         rtorch++;
                         iv_freeze_roaringtorch.setAlpha((float)1);
-                        tv_freeze_roaringtorch.setText("x1");
+                        tv_freeze_roaringtorch.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         rtorch++;
                         iv_freeze_roaringtorch.setAlpha((float)1);
-                        tv_freeze_roaringtorch.setText("x2");
+                        tv_freeze_roaringtorch.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         rtorch = 0;
@@ -235,12 +236,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         fireball++;
                         iv_freeze_fireball.setAlpha((float)1);
-                        tv_freeze_fireball.setText("x1");
+                        tv_freeze_fireball.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         fireball++;
                         iv_freeze_fireball.setAlpha((float)1);
-                        tv_freeze_fireball.setText("x2");
+                        tv_freeze_fireball.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         fireball = 0;
@@ -258,7 +259,7 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         thalnos++;
                         iv_freeze_thalnos.setAlpha((float)1);
-                        tv_freeze_thalnos.setText("x1");
+                        tv_freeze_thalnos.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     default:
                         thalnos = 0;
@@ -276,12 +277,12 @@ public class FreezeFragment extends Fragment {
                     case 0:
                         kobold++;
                         iv_freeze_kobold.setAlpha((float)1);
-                        tv_freeze_kobold.setText("x1");
+                        tv_freeze_kobold.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
                         kobold++;
                         iv_freeze_kobold.setAlpha((float)1);
-                        tv_freeze_kobold.setText("x2");
+                        tv_freeze_kobold.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
                         kobold = 0;
@@ -329,9 +330,9 @@ public class FreezeFragment extends Fragment {
         manaCost = frostbolt*2+icelance+ftorch*3+rtorch*3+fireball*4+thalnos*2+kobold*4-emperorTicks;
         if(manaCost < 0)
             manaCost = 0;
-        tv_freeze_emperor_value.setText(emperorTicks+"");
-        tv_freeze_manacost_value.setText(manaCost+"");
-        tv_freeze_total_value.setText(total+"");
+        tv_freeze_emperor_value.setText(String.format(getResources().getString(R.string.pattern_number), emperorTicks));
+        tv_freeze_manacost_value.setText(String.format(getResources().getString(R.string.pattern_number), manaCost));
+        tv_freeze_total_value.setText(String.format(getResources().getString(R.string.pattern_number), total));
     }
 
 }

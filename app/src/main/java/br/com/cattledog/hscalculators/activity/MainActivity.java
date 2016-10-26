@@ -1,5 +1,6 @@
 package br.com.cattledog.hscalculators.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdView;
@@ -18,6 +21,7 @@ import com.google.android.gms.ads.AdView;
 import java.util.HashMap;
 
 import br.com.cattledog.hscalculators.R;
+import br.com.cattledog.hscalculators.fragment.AnyfinFragment;
 import br.com.cattledog.hscalculators.fragment.FreezeFragment;
 import br.com.cattledog.hscalculators.fragment.MillFragment;
 
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity
 
     public static final int FREEZE_FRAGMENT = 0;
     public static final int MILL_FRAGMENT = 1;
+    public static final int ANYFIN_FRAGMENT = 2;
+    public static final int TOTEM_FRAGMENT = 3;
+    public static final int ROAR_FRAGMENT = 4;
 
     private HashMap<Integer, Fragment> hashFragment;
     private int currentFragmentIndex;
@@ -46,17 +53,43 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+                View v = MainActivity.this.getCurrentFocus();
+                if (v != null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                }
+            }
+        });
 
 
         hashFragment = new HashMap<>();
 
         hashFragment.put(FREEZE_FRAGMENT, new FreezeFragment());
         hashFragment.put(MILL_FRAGMENT, new MillFragment());
+        hashFragment.put(ANYFIN_FRAGMENT, new AnyfinFragment());
         if(savedInstanceState != null){
             currentFragmentIndex = savedInstanceState.getInt(CURRENT_FRAGMENT);
             fragmentTransaction(currentFragmentIndex);
@@ -129,6 +162,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction(FREEZE_FRAGMENT);
         } else if (id == R.id.nav_mill) {
             fragmentTransaction(MILL_FRAGMENT);
+        } else if(id == R.id.nav_anyfin){
+            fragmentTransaction(ANYFIN_FRAGMENT);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -161,6 +196,15 @@ public class MainActivity extends AppCompatActivity
                 break;
             case MILL_FRAGMENT:
                 toolbar.setTitle(getString(R.string.menu_item_title2));
+                break;
+            case ANYFIN_FRAGMENT:
+                toolbar.setTitle(getString(R.string.menu_item_title3));
+                break;
+            case TOTEM_FRAGMENT:
+                toolbar.setTitle(getString(R.string.menu_item_title4));
+                break;
+            case ROAR_FRAGMENT:
+                toolbar.setTitle(getString(R.string.menu_item_title5));
                 break;
             default:
                 toolbar.setTitle(getString(R.string.app_name));
