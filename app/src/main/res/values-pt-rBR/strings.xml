@@ -18,9 +18,12 @@
 
 
     <string name="tv_anyfin_result_name">Taxa de sucesso</string>
-    <string name="tv_anyfin_hp_left_name">HP Restante / Chance</string>
+    <string name="tv_anyfin_hp_left_name">HP Restante/Chance</string>
     <string name="tv_freeze_emperor_name">Descontos\nImperador</string>
     <string name="tv_freeze_total_name">Total</string>
-    <string name="tv_mill_cards_name">Cartas Restantes</string>
+    <string name="tv_mill_cards_name">Cartas\nRestantes</string>
     <string name="tv_mill_draw_name">Cartas Compradas</string>
+    <string name="cb_totem_bloodlust">Sede de Sangue</string>
+    <string name="tv_totem_monboard_name">Lacaios em campo</string>
+    <string name="tv_totem_onboard_name">Dano em campo</string>
 </resources>

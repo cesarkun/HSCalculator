@@ -1,503 +1,536 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    tools:context=".activity.MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cl_freeze"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        card:layout_constraintBottom_toTopOf="@+id/ad_banner"
         card:layout_constraintLeft_toLeftOf="parent"
         card:layout_constraintRight_toRightOf="parent"
-        card:layout_constraintTop_toTopOf="parent"
-        card:layout_constraintBottom_toTopOf="@+id/ad_banner">
+        card:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ads:srcCompat="@drawable/separator"
-            android:alpha="0.8"
             android:id="@+id/iv_freeze_separator1"
-            card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33" />
-
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            ads:srcCompat="@drawable/separator"
-            android:alpha="0.7"
-            android:id="@+id/iv_freeze_separator2"
-            card:layout_constraintRight_toRightOf="parent"
+            android:alpha="0.8"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
             card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:srcCompat="@drawable/separator" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toRightOf="parent"
             card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66" />
+            card:srcCompat="@drawable/separator" />
 
         <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_vertical23"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical23"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
+            card:layout_constraintGuide_percent="0.23"
             tools:layout_editor_absoluteX="177dp"
-            card:layout_constraintGuide_percent="0.23" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_vertical25"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/gl_freeze_vertical25"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.25675675"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="197dp" />
+            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_vertical36"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical36"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
+            card:layout_constraintGuide_percent="0.36"
             tools:layout_editor_absoluteX="276dp"
-            card:layout_constraintGuide_percent="0.36" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
             android:id="@+id/gl_freeze_vertical50"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
+            card:layout_constraintGuide_percent="0.5"
             tools:layout_editor_absoluteX="384dp"
-            card:layout_constraintGuide_percent="0.5" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
             android:id="@+id/gl_freeze_vertical69"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="530dp"
-            card:layout_constraintGuide_percent="0.69" />
-
-        <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/gl_freeze_vertical75"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="578dp"
-            card:layout_constraintGuide_percent="0.7526042" />
+            card:layout_constraintGuide_percent="0.69"
+            tools:layout_editor_absoluteX="530dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_vertical75"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            card:layout_constraintGuide_percent="0.7526042"
+            tools:layout_editor_absoluteX="578dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_horizontal10"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/gl_freeze_horizontal10"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="94dp"
+            card:layout_constraintGuide_percent="0.10405644"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.10405644" />
+            tools:layout_editor_absoluteY="94dp" />
 
         <android.support.constraint.Guideline
-            android:layout_width="0dp"
-            android:layout_height="0dp"
             android:id="@+id/gl_freeze_horizontal16"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteY="148dp"
-            tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.1641791" />
-
-        <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.1641791"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <android.support.constraint.Guideline
             android:id="@+id/gl_freeze_horizontal22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.2239859"
-            tools:layout_editor_absoluteY="202dp"
-            tools:layout_editor_absoluteX="0dp" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="202dp" />
 
         <android.support.constraint.Guideline
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:id="@+id/gl_freeze_horizontal33"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteY="302dp"
-            tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.33509701" />
-
-        <android.support.constraint.Guideline
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/gl_freeze_horizontal66"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteY="601dp"
+            card:layout_constraintGuide_percent="0.33509701"
             tools:layout_editor_absoluteX="0dp"
-            card:layout_constraintGuide_percent="0.6666667" />
+            tools:layout_editor_absoluteY="302dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/gl_freeze_horizontal66"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            card:layout_constraintGuide_percent="0.6666667"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="601dp" />
 
         <ImageView
+            android:id="@+id/iv_freeze_frostbolt"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_frostbolt"
-            android:id="@+id/iv_freeze_frostbolt"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical25"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_frostbolt"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="frostbolt"
-            android:scaleType="fitCenter" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_icelance"
-            android:id="@+id/iv_freeze_icelance"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical25"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical50"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
-            android:layout_marginTop="8dp"
-            android:contentDescription="icelance"
             android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_icelance" />
-
-        <ImageView
-            android:layout_width="0dp"
-            card:srcCompat="@drawable/ic_forgotten_torch"
-            android:id="@+id/iv_freeze_forgottentorch"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
-            android:layout_marginStart="8dp"
-            android:layout_height="0dp"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
-            android:layout_marginTop="8dp"
-            android:contentDescription="ftorch"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_forgottentorch" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_roaring_torch"
-            android:id="@+id/iv_freeze_roaringtorch"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:contentDescription="rtorch"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_roaringtorch" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_fireball"
-            android:id="@+id/iv_freeze_fireball"
-            android:layout_marginStart="8dp"
-            card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginTop="8dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="fireball"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_fireball" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_thalnos"
-            android:id="@+id/iv_freeze_thalnos"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:contentDescription="thalnos"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_thalnos" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            card:srcCompat="@drawable/ic_kobold"
-            android:id="@+id/iv_freeze_kobold"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
-            android:contentDescription="kobold"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_kobold" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:id="@+id/tv_freeze_emperor_name"
-            android:textSize="@dimen/text_size"
-            android:gravity="bottom|center_horizontal"
-            android:layout_marginStart="8dp"
-            card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginBottom="8dp"
-            android:text="@string/tv_freeze_emperor_name"
-            card:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/tv_mana_cost"
-            android:textSize="@dimen/text_size"
-            android:ems="10"
-            android:id="@+id/tv_freeze_manacost_name"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginEnd="8dp"
-            android:gravity="bottom|center_horizontal"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            card:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/tv_freeze_total_name"
-            android:textSize="@dimen/text_size"
-            android:ems="10"
-            android:id="@+id/tv_freeze_total_name"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
-            android:gravity="bottom|center_horizontal"
-            android:layout_marginBottom="8dp"
-            card:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginStart="8dp" />
-
-        <TextView
-            android:text="@string/pattern_number"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:textSize="@dimen/text_size"
-            android:id="@+id/tv_freeze_emperor_value"
-            android:layout_marginStart="8dp"
-            card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
-            android:layout_marginBottom="8dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
-            android:gravity="top|center_horizontal"
-            android:layout_marginTop="8dp" />
-
-        <ImageView
-            android:src="@drawable/ic_add_button"
-            android:alpha="0.7"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/iv_freeze_emperor_plus"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
-            android:minHeight="25dp"
-            android:minWidth="25dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            card:layout_constraintVertical_bias="1.0"
-            android:gravity="center"
-            android:scaleType="fitCenter"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal10" />
-
-        <ImageView
-            android:src="@drawable/ic_minus_button"
-            android:alpha="0.7"
-            android:id="@+id/iv_freeze_emperor_minus"
-            android:layout_height="0dp"
-            android:layout_width="0dp"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal22"
-            android:gravity="center"
-            android:minHeight="25dp"
-            android:minWidth="25dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:scaleType="fitCenter"
-            card:layout_constraintHorizontal_bias="0.56" />
-
-        <TextView
-            android:text="@string/pattern_number"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/tv_freeze_manacost_value"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
-            android:layout_marginBottom="8dp"
-            android:gravity="top|center_horizontal"
-            android:layout_marginStart="8dp"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:text="@string/pattern_number"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:id="@+id/tv_freeze_total_value"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="top|center_horizontal" />
-
-        <TextView
-            android:text="@string/pattern_x_number"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_frostbolt"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_frostbolt"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical25"
-            android:layout_marginEnd="8dp"
-            android:gravity="center" />
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:srcCompat="@drawable/ic_frostbolt" />
 
-        <TextView
-            android:text="@string/pattern_x_number"
+        <ImageView
+            android:id="@+id/iv_freeze_icelance"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_icelance"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginBottom="8dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="icelance"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_icelance"
             card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical25"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical50"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:layout_marginStart="8dp" />
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:srcCompat="@drawable/ic_icelance" />
 
-        <TextView
-            android:text="@string/pattern_x_number"
+        <ImageView
+            android:id="@+id/iv_freeze_forgottentorch"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_forgottentorch"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginBottom="8dp"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75"
+            android:layout_height="0dp"
             android:layout_marginEnd="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
-            android:gravity="center"
-            android:layout_marginStart="8dp" />
-
-        <TextView
-            android:text="@string/pattern_x_number"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_roaringtorch"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
-            android:layout_marginBottom="8dp"
-            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
-            android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
-            android:gravity="center"
-            android:layout_marginStart="8dp" />
-
-        <TextView
-            android:text="@string/pattern_x_number"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_fireball"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="ftorch"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_forgottentorch"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:srcCompat="@drawable/ic_forgotten_torch" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_roaringtorch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="rtorch"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_roaringtorch"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal33"
+            card:srcCompat="@drawable/ic_roaring_torch" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_fireball"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="fireball"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_fireball"
             card:layout_constraintLeft_toLeftOf="parent"
-            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
-            android:gravity="center"
-            android:layout_marginEnd="8dp" />
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical25"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
+            card:srcCompat="@drawable/ic_fireball" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_thalnos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="thalnos"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_thalnos"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical25"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical50"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
+            card:srcCompat="@drawable/ic_thalnos" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_kobold"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="kobold"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_kobold"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
+            card:srcCompat="@drawable/ic_kobold" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_fireblast"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="fireblast"
+            android:scaleType="fitCenter"
+            card:layout_constraintBottom_toTopOf="@+id/tv_freeze_fireblast"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal66"
+            card:srcCompat="@drawable/ic_fireblast" />
 
         <TextView
-            android:text="@string/pattern_x_number"
+            android:id="@+id/tv_freeze_emperor_name"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_thalnos"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/tv_freeze_emperor_name"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
+            card:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_freeze_manacost_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/tv_mana_cost"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:layout_marginStart="8dp" />
+            card:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/pattern_x_number"
+            android:id="@+id/tv_freeze_total_name"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_freeze_kobold"
-            android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            card:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/tv_freeze_total_name"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_freeze_emperor_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top|center_horizontal"
+            android:text="@string/pattern_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_emperor_plus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:gravity="center"
-            android:layout_marginStart="8dp" />
+            android:minHeight="25dp"
+            android:minWidth="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_button"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal10"
+            card:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/iv_freeze_emperor_minus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="25dp"
+            android:minWidth="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_minus_button"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal22"
+            card:layout_constraintHorizontal_bias="0.56"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical23"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical36"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16" />
+
+        <TextView
+            android:id="@+id/tv_freeze_manacost_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top|center_horizontal"
+            android:text="@string/pattern_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical36"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical69"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16" />
+
+        <TextView
+            android:id="@+id/tv_freeze_total_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top|center_horizontal"
+            android:text="@string/pattern_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal33"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical69"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_freeze_horizontal16" />
+
+        <TextView
+            android:id="@+id/tv_freeze_frostbolt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical25" />
+
+        <TextView
+            android:id="@+id/tv_freeze_icelance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical25"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical50" />
+
+        <TextView
+            android:id="@+id/tv_freeze_forgottentorch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75" />
+
+        <TextView
+            android:id="@+id/tv_freeze_roaringtorch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal66"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_freeze_fireball"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="parent"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical25"/>
+
+        <TextView
+            android:id="@+id/tv_freeze_thalnos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical25"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical50" />
+
+        <TextView
+            android:id="@+id/tv_freeze_kobold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical50"
+            card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical75"/>
+
+        <TextView
+            android:id="@+id/tv_freeze_fireblast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="@string/pattern_x_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toBottomOf="parent"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_freeze_vertical75"
+            card:layout_constraintRight_toRightOf="parent" />
+
     </android.support.constraint.ConstraintLayout>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_banner"
-        card:layout_constraintTop_toTopOf="@+id/cl_freeze"
+        card:adSize="BANNER"
+        card:adUnitId="@string/ad_banner"
         card:layout_constraintBottom_toBottomOf="parent"
-        card:layout_constraintRight_toRightOf="parent"
         card:layout_constraintLeft_toLeftOf="parent"
-        card:layout_constraintVertical_bias="1.0">
-    </com.google.android.gms.ads.AdView>
+        card:layout_constraintRight_toRightOf="parent"
+        card:layout_constraintTop_toTopOf="@+id/cl_freeze"
+        card:layout_constraintVertical_bias="1.0"/>
 
 </android.support.constraint.ConstraintLayout>

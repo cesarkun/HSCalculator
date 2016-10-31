@@ -32,6 +32,7 @@ public class FreezeFragment extends Fragment {
     private ImageView iv_freeze_fireball;
     private ImageView iv_freeze_thalnos;
     private ImageView iv_freeze_kobold;
+    private ImageView iv_freeze_fireblast;
 
     private TextView tv_freeze_frostbolt;
     private TextView tv_freeze_icelance;
@@ -40,7 +41,7 @@ public class FreezeFragment extends Fragment {
     private TextView tv_freeze_fireball;
     private TextView tv_freeze_thalnos;
     private TextView tv_freeze_kobold;
-    private CheckBox bx_freeze_ping;
+    private TextView tv_freeze_fireblast;
 
     private ImageView iv_freeze_emperor_plus;
     private ImageView iv_freeze_emperor_minus;
@@ -56,6 +57,7 @@ public class FreezeFragment extends Fragment {
     private int fireball;
     private int thalnos;
     private int kobold;
+    private int fireblast;
 
 
     public FreezeFragment() {
@@ -94,6 +96,7 @@ public class FreezeFragment extends Fragment {
         fireball = 0;
         thalnos = 0;
         kobold = 0;
+        fireblast = 0;
 
         iv_freeze_frostbolt.setAlpha((float)0.5);
         tv_freeze_frostbolt.setText("");
@@ -109,6 +112,8 @@ public class FreezeFragment extends Fragment {
         tv_freeze_thalnos.setText("");
         iv_freeze_kobold.setAlpha((float)0.5);
         tv_freeze_kobold.setText("");
+        iv_freeze_fireblast.setAlpha((float)0.5);
+        tv_freeze_fireblast.setText("");
     }
 
     private void loadViews(View rootview) {
@@ -123,6 +128,7 @@ public class FreezeFragment extends Fragment {
         iv_freeze_fireball = (ImageView) rootview.findViewById(R.id.iv_freeze_fireball);
         iv_freeze_thalnos = (ImageView) rootview.findViewById(R.id.iv_freeze_thalnos);
         iv_freeze_kobold = (ImageView) rootview.findViewById(R.id.iv_freeze_kobold);
+        iv_freeze_fireblast = (ImageView) rootview.findViewById(R.id.iv_freeze_fireblast);
 
         tv_freeze_frostbolt = (TextView) rootview.findViewById(R.id.tv_freeze_frostbolt);
         tv_freeze_icelance = (TextView) rootview.findViewById(R.id.tv_freeze_icelance);
@@ -131,6 +137,7 @@ public class FreezeFragment extends Fragment {
         tv_freeze_fireball = (TextView) rootview.findViewById(R.id.tv_freeze_fireball);
         tv_freeze_thalnos = (TextView) rootview.findViewById(R.id.tv_freeze_thalnos);
         tv_freeze_kobold = (TextView) rootview.findViewById(R.id.tv_freeze_kobold);
+        tv_freeze_fireblast = (TextView) rootview.findViewById(R.id.tv_freeze_fireblast);
 
         iv_freeze_emperor_plus = (ImageView) rootview.findViewById(R.id.iv_freeze_emperor_plus);
         iv_freeze_emperor_minus = (ImageView) rootview.findViewById(R.id.iv_freeze_emperor_minus);
@@ -293,6 +300,24 @@ public class FreezeFragment extends Fragment {
                 updateValues();
             }
         });
+        iv_freeze_fireblast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(fireblast){
+                    case 0:
+                        fireblast++;
+                        iv_freeze_fireblast.setAlpha((float)1);
+                        tv_freeze_fireblast.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
+                        break;
+                    default:
+                        fireblast = 0;
+                        iv_freeze_fireblast.setAlpha((float)0.5);
+                        tv_freeze_fireblast.setText("");
+                        break;
+                }
+                updateValues();
+            }
+        });
 
         iv_freeze_emperor_plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -327,9 +352,11 @@ public class FreezeFragment extends Fragment {
         addDamage(ftorch, 3);
         addDamage(rtorch, 6);
         addDamage(fireball, 6);
+        total+=fireblast;
         manaCost = frostbolt*2+icelance+ftorch*3+rtorch*3+fireball*4+thalnos*2+kobold*4-emperorTicks;
         if(manaCost < 0)
             manaCost = 0;
+        manaCost+=fireblast*2;
         tv_freeze_emperor_value.setText(String.format(getResources().getString(R.string.pattern_number), emperorTicks));
         tv_freeze_manacost_value.setText(String.format(getResources().getString(R.string.pattern_number), manaCost));
         tv_freeze_total_value.setText(String.format(getResources().getString(R.string.pattern_number), total));

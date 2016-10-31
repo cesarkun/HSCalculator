@@ -1,6 +1,7 @@
 package br.com.cattledog.hscalculators.activity;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -16,14 +17,14 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdView;
-
 import java.util.HashMap;
+import java.util.Locale;
 
 import br.com.cattledog.hscalculators.R;
 import br.com.cattledog.hscalculators.fragment.AnyfinFragment;
 import br.com.cattledog.hscalculators.fragment.FreezeFragment;
 import br.com.cattledog.hscalculators.fragment.MillFragment;
+import br.com.cattledog.hscalculators.fragment.TotemFragment;
 
 /**
  * Created by Cesar A. dos Santos on 19/10/2016.
@@ -42,13 +43,13 @@ public class MainActivity extends AppCompatActivity
     private static final String CURRENT_FRAGMENT = "current_fragment_index_flag";
     private Toolbar toolbar;
 
-    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //setLocale();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity
         hashFragment.put(FREEZE_FRAGMENT, new FreezeFragment());
         hashFragment.put(MILL_FRAGMENT, new MillFragment());
         hashFragment.put(ANYFIN_FRAGMENT, new AnyfinFragment());
+        hashFragment.put(TOTEM_FRAGMENT, new TotemFragment());
         if(savedInstanceState != null){
             currentFragmentIndex = savedInstanceState.getInt(CURRENT_FRAGMENT);
             fragmentTransaction(currentFragmentIndex);
@@ -99,29 +101,16 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
+    private void setLocale(){
+        Locale locale = new Locale("pt","BR");
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-    }
 
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
-    }
 
     @Override
     public void onBackPressed() {
@@ -164,6 +153,8 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction(MILL_FRAGMENT);
         } else if(id == R.id.nav_anyfin){
             fragmentTransaction(ANYFIN_FRAGMENT);
+        } else if(id == R.id.nav_totem){
+            fragmentTransaction(TOTEM_FRAGMENT);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

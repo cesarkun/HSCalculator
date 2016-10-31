@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="pattern_number_percent" translatable="false">%d\%</string>
+    <string name="pattern_number_percent" translatable="false">%s</string>
     <string name="pattern_number" translatable="false">%d</string>
     <string name="pattern_x_number" translatable="false">x%d</string>
     <string name="tv_hp_left">HP Left</string>
@@ -26,4 +26,7 @@
     <string name="tv_freeze_total_name">Total</string>
     <string name="tv_mill_cards_name">Cards Left</string>
     <string name="tv_mill_draw_name">Cards Drawn</string>
+    <string name="cb_totem_bloodlust">Bloodlust</string>
+    <string name="tv_totem_monboard_name">Minions on board</string>
+    <string name="tv_totem_onboard_name">Damage on board</string>
 </resources>

@@ -315,9 +315,9 @@ public class AnyfinFragment extends Fragment {
 
             tv_anyfin_total_value.setText(String.format(getResources().getString(R.string.pattern_number), (hp+armor-(2+2*warleader)*bluegill)));
             if((hp+armor-(2+2*warleader)*bluegill)<=0)
-                tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), 100));
+                tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), "100%"));
             else
-                tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), 0));
+                tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), "0%"));
             return;
         }
         int count = 0;
@@ -358,15 +358,15 @@ public class AnyfinFragment extends Fragment {
         tv_anyfin_total_values.setText(rValues);
         tv_anyfin_total_percentages.setText(rPercent);
 
-        tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), (negative*100/count)));
+        tv_anyfin_result_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), (negative*100/count)+"%"));
 
     }
 
     private void updateValues(boolean update){
         calculateDamage();
         if(update) {
-            et_anyfin_hp_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), hp));
-            et_anyfin_armor_value.setText(String.format(getResources().getString(R.string.pattern_number_percent), armor));
+            et_anyfin_hp_value.setText(String.format(getResources().getString(R.string.pattern_number), hp));
+            et_anyfin_armor_value.setText(String.format(getResources().getString(R.string.pattern_number), armor));
         }
     }
 

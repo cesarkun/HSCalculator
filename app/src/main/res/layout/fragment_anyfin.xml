@@ -1,5 +1,4 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:card="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,11 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.7"
-            ads:srcCompat="@drawable/separator"
             card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintRight_toRightOf="parent"
-            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50" />
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:srcCompat="@drawable/separator" />
 
         <TextView
             android:id="@+id/tv_anyfin_result_name"
@@ -81,13 +80,12 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="bottom|center_horizontal"
             android:text="@string/tv_armor"
             android:textSize="@dimen/text_size"
-            card:layout_constraintBottom_toTopOf="@+id/et_anyfin_armor_value"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal25"
             card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
             card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical53"
             card:layout_constraintTop_toTopOf="parent" />
@@ -110,7 +108,7 @@
         <EditText
             android:id="@+id/et_anyfin_hp_value"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -123,12 +121,13 @@
             card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical20"
-            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25" />
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
+            card:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et_anyfin_armor_value"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -142,7 +141,7 @@
             card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical33"
             card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical53"
             card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
-            card:layout_constraintVertical_bias="0.37" />
+            card:layout_constraintVertical_bias="0.0"/>
 
         <ImageView
             android:id="@+id/iv_anyfin_hp_plus"
@@ -262,7 +261,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.20277777"
-            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteX="65dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -271,7 +270,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.33888888"
-            tools:layout_editor_absoluteX="260dp"
+            tools:layout_editor_absoluteX="108dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -280,7 +279,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.53055555"
-            tools:layout_editor_absoluteX="407dp"
+            tools:layout_editor_absoluteX="170dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -289,7 +288,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.6666667"
-            tools:layout_editor_absoluteX="512dp"
+            tools:layout_editor_absoluteX="213dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -298,7 +297,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.825"
-            tools:layout_editor_absoluteX="634dp"
+            tools:layout_editor_absoluteX="264dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -308,7 +307,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.19"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="170dp" />
+            tools:layout_editor_absoluteY="86dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_anyfin_horizontal25"
@@ -317,7 +316,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.25"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="223dp" />
+            tools:layout_editor_absoluteY="113dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_anyfin_horizontal31"
@@ -326,7 +325,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.31"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="277dp" />
+            tools:layout_editor_absoluteY="140dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_anyfin_horizontal50"
@@ -335,7 +334,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.5"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="447dp" />
+            tools:layout_editor_absoluteY="226dp" />
 
 
         <android.support.constraint.Guideline
@@ -343,9 +342,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            card:layout_constraintGuide_percent="0.65"
+            card:layout_constraintGuide_percent="0.7"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="580dp" />
+            tools:layout_editor_absoluteY="316dp" />
         <TextView
             android:id="@+id/tv_anyfin_total_value"
             android:layout_width="0dp"
@@ -363,36 +362,34 @@
             card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25" />
 
         <TextView
-            android:text="@string/pattern_number"
+            android:id="@+id/tv_anyfin_total_values"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:textSize="@dimen/text_size"
-            android:id="@+id/tv_anyfin_total_values"
-            ads:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
-            ads:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="top|center_horizontal"
-            ads:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
-            ads:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical82"/>
+            android:text="@string/pattern_number"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical66"
+            card:layout_constraintRight_toLeftOf="@+id/gl_anyfin_vertical82"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"/>
 
         <TextView
-            android:text="@string/pattern_number_percent"
+            android:id="@+id/tv_anyfin_total_percentages"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:textSize="@dimen/text_size"
-            android:id="@+id/tv_anyfin_total_percentages"
-            ads:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25"
-            ads:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="0dp"
             android:layout_marginTop="8dp"
             android:gravity="top|center_horizontal"
-            ads:layout_constraintRight_toRightOf="parent"
-            ads:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical82" />
+            android:text="@string/pattern_number_percent"
+            android:textSize="@dimen/text_size"
+            card:layout_constraintBottom_toTopOf="@+id/gl_anyfin_horizontal50"
+            card:layout_constraintLeft_toLeftOf="@+id/gl_anyfin_vertical82"
+            card:layout_constraintRight_toRightOf="parent"
+            card:layout_constraintTop_toTopOf="@+id/gl_anyfin_horizontal25" />
     </android.support.constraint.ConstraintLayout>
 
     <com.google.android.gms.ads.AdView
@@ -402,8 +399,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_banner"
+        card:adSize="BANNER"
+        card:adUnitId="@string/ad_banner"
         card:layout_constraintBottom_toBottomOf="parent"
         card:layout_constraintLeft_toLeftOf="parent"
         card:layout_constraintRight_toRightOf="parent"

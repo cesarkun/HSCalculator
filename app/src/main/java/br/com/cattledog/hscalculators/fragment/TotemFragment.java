@@ -11,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,33 +31,37 @@ import br.com.cattledog.hscalculators.R;
  * Created by Cesar A. dos Santos on 19/10/2016.
  */
 public class TotemFragment extends Fragment {
-    private TextView tv_anyfin_result_value;
-    private EditText et_anyfin_hp_value;
-    private EditText et_anyfin_armor_value;
-    private TextView tv_anyfin_total_name;
-    private TextView tv_anyfin_total_value;
-    private TextView tv_anyfin_total_values;
-    private TextView tv_anyfin_total_percentages;
-    private ImageView iv_anyfin_bluegill;
-    private ImageView iv_anyfin_warleader;
+    private EditText et_totem_hp_value;
+    private EditText et_totem_armor_value;
+    private EditText et_totem_onboard_value;
+    private EditText et_totem_monboard_value;
+    private TextView tv_totem_valiant;
+    private TextView tv_totem_hero;
+    private TextView tv_totem_hpleft_value;
 
+    private ImageView iv_totem_hp_plus;
+    private ImageView iv_totem_hp_minus;
+    private ImageView iv_totem_armor_plus;
+    private ImageView iv_totem_armor_minus;
+    private ImageView iv_totem_onboard_plus;
+    private ImageView iv_totem_onboard_minus;
+    private ImageView iv_totem_monboard_plus;
+    private ImageView iv_totem_monboard_minus;
+    
+    private CheckBox cb_totem_bloodlust;
 
-    private TextView tv_anyfin_bluegill;
-    private TextView tv_anyfin_warleader;
-
-    private ImageView iv_anyfin_hp_plus;
-    private ImageView iv_anyfin_hp_minus;
-
-    private ImageView iv_anyfin_armor_plus;
-    private ImageView iv_anyfin_armor_minus;
+    private ImageView iv_totem_valiant;
+    private ImageView iv_totem_hero;
+    
 
     private int damage;
     private int hp;
     private int armor;
+    private int onboard;
+    private int monboard;
+    private int valiant;
+    private int hero;
 
-    private int bluegill;
-    private int warleader;
-    private int shadowstep;
     private AdView mAdView;
 
 
@@ -67,7 +72,7 @@ public class TotemFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootview = inflater.inflate(R.layout.fragment_anyfin, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_totem, container, false);
         loadViews(rootview);
         initializeCounters();
         setOnClicks();
@@ -88,146 +93,117 @@ public class TotemFragment extends Fragment {
         damage = 0;
         hp = 30;
         armor = 0;
+        onboard = 0;
+        monboard = 0;
+        valiant = 0;
+        hero = 0;
 
-        bluegill = 0;
-        warleader = 0;
-        shadowstep = 0;
-
-        iv_anyfin_bluegill.setAlpha((float)0.5);
-        tv_anyfin_bluegill.setText("");
-        iv_anyfin_warleader.setAlpha((float)0.5);
-        tv_anyfin_warleader.setText("");
+        iv_totem_valiant.setAlpha((float)0.5);
+        tv_totem_valiant.setText("");
+        iv_totem_hero.setAlpha((float)0.5);
+        tv_totem_hero.setText("");
     }
 
     private void loadViews(View rootview) {
-        tv_anyfin_result_value = (TextView) rootview.findViewById(R.id.tv_anyfin_result_value);
-        et_anyfin_hp_value = (EditText) rootview.findViewById(R.id.et_anyfin_hp_value);
-        et_anyfin_armor_value = (EditText) rootview.findViewById(R.id.et_anyfin_armor_value);
-        tv_anyfin_total_value = (TextView) rootview.findViewById(R.id.tv_anyfin_total_value);
-        tv_anyfin_total_name = (TextView) rootview.findViewById(R.id.tv_anyfin_total_name);
-        tv_anyfin_total_values = (TextView) rootview.findViewById(R.id.tv_anyfin_total_values);
-        tv_anyfin_total_percentages = (TextView) rootview.findViewById(R.id.tv_anyfin_total_percentages);
+        et_totem_hp_value = (EditText) rootview.findViewById(R.id.et_totem_hp_value);
+        et_totem_armor_value = (EditText) rootview.findViewById(R.id.et_totem_armor_value);
+        et_totem_onboard_value = (EditText) rootview.findViewById(R.id.et_totem_onboard_value);
+        et_totem_monboard_value = (EditText) rootview.findViewById(R.id.et_totem_monboard_value);
+        tv_totem_valiant = (TextView) rootview.findViewById(R.id.tv_totem_valiant);
+        tv_totem_hero = (TextView) rootview.findViewById(R.id.tv_totem_hero);
+        tv_totem_hpleft_value = (TextView) rootview.findViewById(R.id.tv_totem_hpleft_value);
 
+        iv_totem_hp_plus = (ImageView) rootview.findViewById(R.id.iv_totem_hp_plus);
+        iv_totem_hp_minus = (ImageView) rootview.findViewById(R.id.iv_totem_hp_minus);
+        iv_totem_armor_plus = (ImageView) rootview.findViewById(R.id.iv_totem_armor_plus);
+        iv_totem_armor_minus = (ImageView) rootview.findViewById(R.id.iv_totem_armor_minus);
+        iv_totem_onboard_plus = (ImageView) rootview.findViewById(R.id.iv_totem_onboard_plus);
+        iv_totem_onboard_minus = (ImageView) rootview.findViewById(R.id.iv_totem_onboard_minus);
+        iv_totem_monboard_plus = (ImageView) rootview.findViewById(R.id.iv_totem_monboard_plus);
+        iv_totem_monboard_minus = (ImageView) rootview.findViewById(R.id.iv_totem_monboard_minus);
 
-        iv_anyfin_bluegill = (ImageView) rootview.findViewById(R.id.iv_anyfin_bluegill);
-        iv_anyfin_warleader = (ImageView) rootview.findViewById(R.id.iv_anyfin_warleader);
-
-        tv_anyfin_bluegill = (TextView) rootview.findViewById(R.id.tv_anyfin_bluegill);
-        tv_anyfin_warleader = (TextView) rootview.findViewById(R.id.tv_anyfin_warleader);
-
-        iv_anyfin_hp_plus = (ImageView) rootview.findViewById(R.id.iv_anyfin_hp_plus);
-        iv_anyfin_hp_minus = (ImageView) rootview.findViewById(R.id.iv_anyfin_hp_minus);
-
-        iv_anyfin_armor_plus = (ImageView) rootview.findViewById(R.id.iv_anyfin_armor_plus);
-        iv_anyfin_armor_minus = (ImageView) rootview.findViewById(R.id.iv_anyfin_armor_minus);
+        cb_totem_bloodlust = (CheckBox) rootview.findViewById(R.id.cb_totem_bloodlust);
+        iv_totem_valiant = (ImageView) rootview.findViewById(R.id.iv_totem_valiant);
+        iv_totem_hero = (ImageView) rootview.findViewById(R.id.iv_totem_hero);
     }
 
     private void setOnClicks() {
-        iv_anyfin_bluegill.setOnClickListener(new View.OnClickListener() {
+        iv_totem_valiant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch(bluegill){
+                switch(valiant){
                     case 0:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x1");
+                        valiant++;
+                        if(monboard<7)
+                            monboard++;
+                        iv_totem_valiant.setAlpha((float)1);
+                        tv_totem_valiant.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x2");
-                        break;
-                    case 2:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x3");
-                        break;
-                    case 3:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x4");
-                        break;
-                    case 4:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x5");
-                        break;
-                    case 5:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x6");
-                        break;
-                    case 6:
-                        bluegill++;
-                        iv_anyfin_bluegill.setAlpha((float)1);
-                        tv_anyfin_bluegill.setText("x7");
+                        valiant++;
+                        if(monboard<7)
+                            monboard++;
+                        iv_totem_valiant.setAlpha((float)1);
+                        tv_totem_valiant.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
                     default:
-                        bluegill = 0;
-                        iv_anyfin_bluegill.setAlpha((float)0.5);
-                        tv_anyfin_bluegill.setText("");
+                        valiant = 0;
+                        if(monboard>=2)
+                            monboard-=2;
+                        iv_totem_valiant.setAlpha((float)0.5);
+                        tv_totem_valiant.setText("");
                         break;
                 }
                 updateValues(true);
             }
         });
-        iv_anyfin_warleader.setOnClickListener(new View.OnClickListener() {
+        iv_totem_hero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch(warleader){
+                switch(hero){
                     case 0:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x1");
+                        hero++;
+                        if(monboard<7)
+                            monboard++;
+                        iv_totem_hero.setAlpha((float) 1);
+                        tv_totem_hero.setText(String.format(getResources().getString(R.string.pattern_x_number), 1));
                         break;
                     case 1:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x2");
+                        hero++;
+                        if(monboard<7)
+                            monboard++;
+                        iv_totem_hero.setAlpha((float) 1);
+                        tv_totem_hero.setText(String.format(getResources().getString(R.string.pattern_x_number), 2));
                         break;
+
                     case 2:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x3");
+                        hero++;
+                        if(monboard<7)
+                            monboard++;
+                        iv_totem_hero.setAlpha((float) 1);
+                        tv_totem_hero.setText(String.format(getResources().getString(R.string.pattern_x_number), 3));
                         break;
-                    case 3:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x4");
-                        break;
-                    case 4:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x5");
-                        break;
-                    case 5:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x6");
-                        break;
-                    case 6:
-                        warleader++;
-                        iv_anyfin_warleader.setAlpha((float)1);
-                        tv_anyfin_warleader.setText("x7");
-                        break;
+
                     default:
-                        warleader = 0;
-                        iv_anyfin_warleader.setAlpha((float)0.5);
-                        tv_anyfin_warleader.setText("");
+                        hero = 0;
+                        if(monboard>=3)
+                            monboard-=3;
+                        iv_totem_hero.setAlpha((float)0.5);
+                        tv_totem_hero.setText("");
                         break;
                 }
                 updateValues(true);
             }
         });
 
-        iv_anyfin_hp_plus.setOnClickListener(new View.OnClickListener() {
+        iv_totem_hp_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 hp++;
                 updateValues(true);
             }
         });
-        iv_anyfin_hp_minus.setOnClickListener(new View.OnClickListener() {
+        iv_totem_hp_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(hp>0)
@@ -236,14 +212,14 @@ public class TotemFragment extends Fragment {
             }
         });
 
-        iv_anyfin_armor_plus.setOnClickListener(new View.OnClickListener() {
+        iv_totem_armor_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 armor++;
                 updateValues(true);
             }
         });
-        iv_anyfin_armor_minus.setOnClickListener(new View.OnClickListener() {
+        iv_totem_armor_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(armor>0)
@@ -251,7 +227,40 @@ public class TotemFragment extends Fragment {
                 updateValues(true);
             }
         });
-        et_anyfin_hp_value.addTextChangedListener(new TextWatcher() {
+
+        iv_totem_onboard_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onboard++;
+                updateValues(true);
+            }
+        });
+        iv_totem_onboard_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(onboard>0)
+                    onboard--;
+                updateValues(true);
+            }
+        });
+
+        iv_totem_monboard_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(monboard < 7)
+                    monboard++;
+                updateValues(true);
+            }
+        });
+        iv_totem_monboard_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(monboard>valiant+hero)
+                    monboard--;
+                updateValues(true);
+            }
+        });
+        et_totem_hp_value.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -280,7 +289,7 @@ public class TotemFragment extends Fragment {
                 updateValues(false);
             }
         });
-        et_anyfin_armor_value.addTextChangedListener(new TextWatcher() {
+        et_totem_armor_value.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -308,70 +317,78 @@ public class TotemFragment extends Fragment {
                 updateValues(false);
             }
         });
+        et_totem_onboard_value.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    onboard = (int)Long.parseLong(s.toString());
+                    if(onboard > 9999){
+                        s.replace(0, s.length(), "9999");
+                        onboard = 9999;
+                    }
+                    if(s.toString().startsWith("0") && s.length()!=1)
+                        s.replace(0, s.length(), onboard+"");
+                }
+                catch (Exception e){
+                    s.append("0");
+                    onboard = 0;
+                }
+                updateValues(false);
+            }
+        });
+        et_totem_monboard_value.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    monboard = (int)Long.parseLong(s.toString());
+                    if(s.toString().startsWith("0") && s.length()!=1)
+                        s.replace(0, s.length(), monboard+"");
+                }
+                catch (Exception e){
+                    s.append("0");
+                    monboard = 0;
+                }
+                updateValues(false);
+            }
+        });
+        cb_totem_bloodlust.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateValues(false);
+            }
+        });
     }
 
     private void calculateDamage() {
-        HashMap<Integer, Integer> results = new HashMap<>();
-        if(warleader+bluegill<=7){
-            tv_anyfin_total_name.setText("HP Left");
-            tv_anyfin_total_value.setVisibility(View.VISIBLE);
-            tv_anyfin_total_values.setVisibility(View.GONE);
-            tv_anyfin_total_percentages.setVisibility(View.GONE);
-            tv_anyfin_total_value.setText(""+(hp+armor-(2+2*warleader)*bluegill));
-            if((hp+armor-(2+2*warleader)*bluegill)<=0)
-                tv_anyfin_result_value.setText("100%");
-            else
-                tv_anyfin_result_value.setText("0%");
-            return;
-        }
-        int count = 0;
-        int negative = 0;
-        for (int i = 0; i <= warleader; i++) {
-            for (int j = 0; j <= bluegill; j++) {
-                if(i+j !=7 )
-                    continue;
-                count++;
-                int result = (hp+armor-(2+2*i)*j);
-                if(results.containsKey(result)){
-                    results.put(result, results.get(result)+1);
-                }
-                else {
-                    results.put(result, 1);
-                }
-                if(result<=0)
-                    negative++;
-            }
-        }
-        tv_anyfin_total_name.setText("HP Left / Chance");
-        tv_anyfin_total_value.setVisibility(View.GONE);
-        tv_anyfin_total_values.setVisibility(View.VISIBLE);
-        tv_anyfin_total_percentages.setVisibility(View.VISIBLE);
-        String rValues = "";
-        String rPercent = "";
-        List<Integer> list = new ArrayList<>(results.keySet());
-        Collections.sort(list, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1-o2;
-            }
-        });
-        for (Integer integer : list) {
-            rValues += integer+"\n";
-            rPercent += results.get(integer)*100/count+"%\n";
-        }
-        tv_anyfin_total_values.setText(rValues);
-        tv_anyfin_total_percentages.setText(rPercent);
-
-        tv_anyfin_result_value.setText((negative*100/count)+"%");
-
+        damage = onboard + (cb_totem_bloodlust.isChecked()?((monboard+hero)*3):0) + ((monboard<7)?(hero*valiant*2):0);
+        tv_totem_hpleft_value.setText(String.format(getResources().getString(R.string.pattern_number), hp+armor-damage));
     }
 
     private void updateValues(boolean update){
-        damage = 0;
         calculateDamage();
         if(update) {
-            et_anyfin_hp_value.setText(hp + "");
-            et_anyfin_armor_value.setText(armor + "");
+            et_totem_hp_value.setText(String.format(getResources().getString(R.string.pattern_number), hp));
+            et_totem_armor_value.setText(String.format(getResources().getString(R.string.pattern_number), armor));
+            et_totem_onboard_value.setText(String.format(getResources().getString(R.string.pattern_number), onboard));
+            et_totem_monboard_value.setText(String.format(getResources().getString(R.string.pattern_number), monboard));
         }
     }
 
