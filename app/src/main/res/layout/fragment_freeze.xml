@@ -42,7 +42,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.23"
-            tools:layout_editor_absoluteX="177dp"
+            tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.25675675"
-            tools:layout_editor_absoluteX="197dp"
+            tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -60,7 +60,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.36"
-            tools:layout_editor_absoluteX="276dp"
+            tools:layout_editor_absoluteX="115dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -69,7 +69,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.5"
-            tools:layout_editor_absoluteX="384dp"
+            tools:layout_editor_absoluteX="160dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -78,7 +78,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.69"
-            tools:layout_editor_absoluteX="530dp"
+            tools:layout_editor_absoluteX="221dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -87,7 +87,7 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             card:layout_constraintGuide_percent="0.7526042"
-            tools:layout_editor_absoluteX="578dp"
+            tools:layout_editor_absoluteX="241dp"
             tools:layout_editor_absoluteY="0dp" />
 
         <android.support.constraint.Guideline
@@ -97,7 +97,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.10405644"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="94dp" />
+            tools:layout_editor_absoluteY="48dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_freeze_horizontal16"
@@ -106,7 +106,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.1641791"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="148dp" />
+            tools:layout_editor_absoluteY="75dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_freeze_horizontal22"
@@ -115,7 +115,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.2239859"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="202dp" />
+            tools:layout_editor_absoluteY="103dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_freeze_horizontal33"
@@ -124,7 +124,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.33509701"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="302dp" />
+            tools:layout_editor_absoluteY="154dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/gl_freeze_horizontal66"
@@ -133,7 +133,7 @@
             android:orientation="horizontal"
             card:layout_constraintGuide_percent="0.6666667"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="601dp" />
+            tools:layout_editor_absoluteY="306dp" />
 
         <ImageView
             android:id="@+id/iv_freeze_frostbolt"
@@ -276,8 +276,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:gravity="bottom|center_horizontal"
@@ -286,7 +284,8 @@
             card:layout_constraintBottom_toTopOf="@+id/gl_freeze_horizontal16"
             card:layout_constraintLeft_toLeftOf="parent"
             card:layout_constraintRight_toLeftOf="@+id/gl_freeze_vertical23"
-            card:layout_constraintTop_toTopOf="parent" />
+            card:layout_constraintTop_toTopOf="parent"
+            card:layout_constraintHorizontal_bias="0.56" />
 
         <TextView
             android:id="@+id/tv_freeze_manacost_name"
